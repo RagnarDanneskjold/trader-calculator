@@ -4,6 +4,8 @@ Trader Calculator
       |portugal|
     - *Download the latest version for your platform at* `https://box.com/trader-calculator/ 
       <https://box.com/trader-calculator/>`_
+    - *Source-code at* `https://github.com/ffunenga/trader-calculator/ 
+      <https://github.com/ffunenga/trader-calculator/>`_
 
 .. |portugal| image:: images/pt.png
 .. |england| image:: images/en.png
