@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Trader Calculator 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-12 10:53\n"
+"POT-Creation-Date: 2013-01-15 13:53\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,451 +17,451 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../source/theory.rst:1
-# d1d080ff1cb746ff96ae44866e4a109b
+# 7e0483cd172b4723a24c97511db21f9d
 msgid "*WARNING: If you decide to copy anything from this page, please do not forget to make a proper citation. Feel free to download the pdf version available* `here <../article>`_."
 msgstr ""
 
 #: ../../source/theory.rst:6
-# c028a77b5b874a1597da6b2d36a35810
+# 59da799a8c5d47278fb7c03f960efee6
 msgid "Introduction to the Betting Exchange"
 msgstr ""
 
 #: ../../source/theory.rst:7
-# 657a183c925f4e00b7384e37e82f30fe
+# ecd2760f98904ee89a170c3dc858250e
 msgid "Filipe Funenga -- Lisbon, Portugal -- September 18, 2012"
 msgstr ""
 
 #: ../../source/theory.rst:11
-# 469413ee794e4276a9e0797f36d1e9ee
+# 4f07f8a9091f4d75bd4d10111012fe2b
 msgid "A basic introduction is made to trading in a betting exchange. Beyond analysing the central system of equations for trading in its matrix form, an equation is provided aiming at a dynamic configuration of the proportion between returns. Also, various approaches are presented, denoting the possibility for a trader to manage the profits based on his expectation of the event."
 msgstr ""
 
 #: ../../source/theory.rst:19
-# f61281a7e26541afb24e8c1104ebbb8b
+# cd0d2e11e81e41dfb667424ef3806d7c
 msgid "Betting Exchange"
 msgstr ""
 
 #: ../../source/theory.rst:20
-# e23b3e2ff49b425a8ba5711b08febcef
+# 33d2c584d75845f49b546c161fa3d73c
 msgid "An online betting exchange is a web service where users can, among other things, trade contracts with each other about the outcome of future random events. The pay-off of these contracts can either be some fixed amount of money or nothing at all. The main innovation of this system, compared to traditional bookmakers, lies in providing a method to set fixed odds against an outcome -- known as *laying* -- and invite other users to bet in favour of the outcome -- know as *backing*. This type of freedom had previously been reserved only to bookmakers."
 msgstr ""
 
 #: ../../source/theory.rst:30
-# b49cc6d3ea014a93bbff4e95f6d5106d
+# 318fc1ecf1024c5bb3f2dec2fe3b3a77
 msgid "The betting exchange concept, envisioned and created by Betfair :math:`\\textsuperscript{\\textregistered}` [1]_ in 2000, has revolutionized sports and race wagering, attracting the attention of sports bodies, major competitors and governments, who seem uncertain about how to deal with this revolutionary transaction system, as well as customers globally, who are attracted by the far superior value proposition offered. [2]_ Smaller companies exist but Betfair :math:`\\textsuperscript{\\textregistered}` is considered to have a virtual monopoly."
 msgstr ""
 
 #: ../../source/theory.rst:40
-# 591ff97213e6488ba7dccebb883d4445
+# 322b73398b5a45099088f343bcd60187
 msgid "In facilitating betting as a neutral intermediary the company responsible for maintaining the exchange generates revenue by taking a commission from the winner of the contract. This means that the company is only interested in maximizing the amount of money transacted between users and that it has no vested interest in the outcome of the events. The commission charged is calculated as a percentage of net winnings for each customer on each event, or market. The final value that the customer will get can be calculated with the *house function*, :math:`H`, which is formulated in the following manner:"
 msgstr ""
 
 #: ../../source/theory.rst:60
-# 19c00607e76d41d4b818460ca73ce721
+# 55103b806c0c4a738a7b2952d3184b22
 msgid "where :math:`h` is the house percentage (normally 0.05)."
 msgstr ""
 
 #: ../../source/theory.rst:62
-# 1a50c20829194564bfea1d760e28a381
+# fa11e5c3c4d2414cb09440cdc0ee7712
 msgid "The neutral position makes customers, whose betting activities have traditionally been \"restricted\" by bookmakers (normally successful users that won too much money), able to place bets only limited by market liquidity. [3]_"
 msgstr ""
 
 #: ../../source/theory.rst:70
-# 6569539fb2f64786bf55867768da5fa2
+# 8ef6ce7e97e54335a74c91e066729799
 msgid "Decimal Odds and Probabilities"
 msgstr ""
 
 #: ../../source/theory.rst:71
-# 4e70a2722bb74397b75f8aef1937a9bd
+# 729465999cc94459a4c07ec6d76703c9
 msgid "Traditional odds in favour of an event, :math:`O_{t}`, is the ratio of the probability that an event will happen to the probability that it will not happen. For example, the traditional odds that a randomly chosen day of the week is a Sunday are one to six, which is written :math:`1/6` or 1:6."
 msgstr ""
 
 #: ../../source/theory.rst:77
-# e2a4eb2e375c4af782be717ffca2eb5d
+# aef133b4ee724f418e6630a0c76285ce
 msgid "Decimal Odds, :math:`O_{d}`, are simpler to use than traditional ones and are the most common form of odds quoted in countries outside the UK. Unlike the traditional interpretation, the customer stake is included as part of his total return, :math:`O_{t}=O_{d}+1`, relating more closely to the concept of probability. In the previous example, each day of the week has decimal odds of 7.0."
 msgstr ""
 
 #: ../../source/theory.rst:85
-# 287f286e1e894406bc163874a5fd6eed
+# ca2467efca0d4d609dabcdc2ec386aa4
 msgid "The implied probability of an outcome described by decimal odds, equals 1 divided by its odds:"
 msgstr ""
 
 #: ../../source/theory.rst:91
-# 3f6c7e64864c46548e62112373c8b467
+# 0bd052f193cc453384b53d4d270d8135
 msgid "which concludes that everyday there is a :math:`\\frac{1}{7} = 14.3\\%` chance of being Sunday."
 msgstr ""
 
 #: ../../source/theory.rst:94
-# ea57d61b8a304b4683b1d4e1a8de1a15
+# cf9065dd5fe54b30934909948ec67bc4
 msgid "This means that when a customer makes a bet, he is actually making a financial commitment about his expectations on the outcome of an event through the implied probability of the bet. As we will see in appendix :ref:`expectedVariance`, the expected value of bets depend on a relation between the real probability of the event and the implicit probability of the bet."
 msgstr ""
 
 #: ../../source/theory.rst:102
-# f61281a7e26541afb24e8c1104ebbb8b
+# c94be0bd17fb4807a3c69069d4127cc8
 msgid "Betting Terminology"
 msgstr ""
 
 #: ../../source/theory.rst:103
-# ed4f45a76c3541908342e2b9cc93fc6e
+# 109c2484c71f4bb69d32177fb76f3fe6
 msgid "Various terms are nowadays well established to characterize the way betting exchange's customers build their sets of bets."
 msgstr ""
 
 #: ../../source/theory.rst:106
-# ecee9826d8734306bba33f25188c9afd
+# b615fe47f7564cf489c9dda2d187a462
 msgid "First of all, clear distinctions arise related to the number of betted events. If the set only backs and/or lays one event, than it is said that the costumer is *Hedging*. On the contrary, if more than one event is betted upon, than its called *Dutching*."
 msgstr ""
 
 #: ../../source/theory.rst:111
-# e1b2c1d42e274ab0ba9996f396a4ffda
+# 6537b920c9924b47830ef41d681f5ea2
 msgid "A particular case of *Hedging* is when the costumer only closes one bet. This sort of action is known as *Speculating* since the costumer's (colloquially called a *punter*) transactions are based on hints. For instance, a *punter* will easily close a back bet on a single event of a soccer game and wait until the end to see the outcome."
 msgstr ""
 
 #: ../../source/theory.rst:118
-# d1352d1f807c4ef5bf070dccdcdec548
+# 41cc6f6ee7964626a7afef28f31794c9
 msgid "*Dutching* also has a special case called *Surebeting*. This happens when the events betted upon are collectively exhaustive (all the possible events)."
 msgstr ""
 
 #: ../../source/theory.rst:123
-# d989fb772c374a5eb8524bad62ff854d
+# 8d9ba2033ae245e79a2f2ccc29c6da6c
 msgid "Number of Betted Events"
 msgstr ""
 
 #: ../../source/theory.rst:123
 #: ../../source/theory.rst:155
-# 3c33f35f4c5346babe8dc3ccc08625b7
-# 33bff3dfda3641ee828ef5fcd8f4595c
+# 7bc2755e3cea4b68b9839d285e970e9c
+# ac7820578bdc4edfaf245731d04e4746
 msgid "Terminology"
 msgstr ""
 
 #: ../../source/theory.rst:125
-# 0d8e6098f9ea4c28845501340683d2ed
+# 8a8dac5b272d4983abd2d837be1a73e2
 msgid "Single"
 msgstr ""
 
 #: ../../source/theory.rst:125
-# dcf4fe435c4e4ddd8fa7100a799eb83f
+# 250e01b61de0479997063f2f888e8600
 msgid "*Hedging* or *Speculating*"
 msgstr ""
 
 #: ../../source/theory.rst:127
-# edcbd1f4c78f47df9a2468c4e788446c
+# 3bfdacba7ffd411b9c48eaf14aefeeed
 msgid "Multiple"
 msgstr ""
 
 #: ../../source/theory.rst:127
-# 513f840e7b5546b49c0f5e09b5deb4d2
+# 948065561a86462db760706f50ce086f
 msgid "*Dutching* or *Surebeting*"
 msgstr ""
 
 #: ../../source/theory.rst:130
-# 17069f80bb85458980600ba7c44ece60
+# 9d05f8e1064c4ee2a60cfcbe7e0bddc0
 msgid "The closing of bets can be further distinguished based on its timing, denoting two well known fashions: *Arbitrage* and *Trading*."
 msgstr ""
 
 #: ../../source/theory.rst:133
-# 662746b85782480e8751ff54118f36c9
+# ad6e64ce10824a38b8e3fd834bd4669f
 msgid "In economics and finance, *Arbitrage* is the practice of taking advantage of a price difference between two or more markets: striking a combination of matching deals that capitalize upon the imbalance, the profit being the difference between the market prices."
 msgstr ""
 
 #: ../../source/theory.rst:138
-# 4882c26c6f4945afbd977e82f705df6e
+# 584a41ce13234268a4c64d1820672d2c
 msgid "In the betting exchange context, it is possible to became an *Arbitrageur* when the implied probabilities (see :ref:`decimalOddsAndProbabilities`) of all possible events sum up to more than one. For instance, in a soccer match the odds available for backing :math:`\\{\\text{Home},\\text{Visitor},\\text{Draw}\\}` are :math:`O_{i} = \\{1.3, 4.3, 2.3\\}`, respectively. This results in a total :math:`\\sum_{i} \\frac{1}{O_{i}} = 1.44` probability which now allows to take profit with a *Surebet*. *Arbitrageurs* are traditionally known to perform *surebets* on multiple bookmakers. The same situation can be performed, although highly unlikely, with hedging."
 msgstr ""
 
 #: ../../source/theory.rst:150
-# c4091d19c08d405192e44eb57b4ffcfa
+# e811eaff7e694a70b68e037a4208d143
 msgid "A *Trader*, someone who performs *Trading*, takes an extra risk and closes his bets at different stages when the implied probabilities offered by the market turn out to be more favourable."
 msgstr ""
 
 #: ../../source/theory.rst:155
-# 7edc4f8f908d43288878ced6b1b1b60a
+# 58aefb2d17924a18af9e3784058e21ea
 msgid "Generation of Imbalance"
 msgstr ""
 
 #: ../../source/theory.rst:157
-# b7f54387cec949fca4731f46bd9a215d
+# af43e258974c42eab8560b9c863d4511
 msgid "Immediate"
 msgstr ""
 
 #: ../../source/theory.rst:157
-# 02c02d218d6b4e69a3642f2cb95e687e
+# 65b5401333fd4214ba22b8d131eac54a
 msgid "*Arbitrage*"
 msgstr ""
 
 #: ../../source/theory.rst:159
-# 80133bb9eea14f7489b3210934cc947b
+# 4fa064f2af18465983f913765f0a069c
 msgid "Gradual"
 msgstr ""
 
 #: ../../source/theory.rst:159
-# 18aa7d4c85294a0383f4d1fca8e68242
+# f6cc02fd0ce14fe1a1df604f8274f28a
 msgid "*Trading*"
 msgstr ""
 
 #: ../../source/theory.rst:163
-# 88053b531c384ad0801dc2cadc52bd21
+# d780f0421c5b4da39299b044b8f24f9e
 msgid "The Back-Lay Pair"
 msgstr ""
 
 #: ../../source/theory.rst:164
-# 703ad26a71c0480895e39a4a0ebc1291
+# 882a01eafa534531b392180ea0ec6455
 msgid "The profit/loss of back and lay bets can be represented as random variables established by a stake and an implied probability in the following manner:"
 msgstr ""
 
 #: ../../source/theory.rst:186
-# ad88551bf3614cd3b3c57a28889148b8
+# 52c37f8b729044e38ab7dd31c0bded00
 msgid "where :math:`p_{B}` and :math:`p_{L}` are the implied probabilities of the bet, :math:`s_{B}` and :math:`s_{L}` the stakes. The expected value and variance of each variable are calculated in :ref:`expectedVariance`."
 msgstr ""
 
 #: ../../source/theory.rst:191
-# f31314f182fd4bc28230e5f93975cdad
+# 1aaea5056feb4764a1098f9facee78f7
 msgid "Nowadays, in order to understand if it is possible to make profit with this pair of bets, the most common metric used is the *greenbook* which is defined has the situation of having positive profits in all markets (regardless to the distribution). Although this is an acceptable way of evaluating the established situation, a more generic metric will tell us if it is possible to make profit, which is not enough to satisfy a *greenbook*."
 msgstr ""
 
 #: ../../source/theory.rst:206
-# 635b393f4fe646b6812a55bf828c7e57
+# f67928b6a8a94d44b3813bfc1b0c1804
 msgid "The following matrix form is now presented where the two possible profits can be calculated with:"
 msgstr ""
 
 #: ../../source/theory.rst:226
-# f29b7f081da74d33af7665ec7f91611a
+# 89de186543804da3a56af16e135b248d
 msgid "where :math:`P` is the *profit matrix*, :math:`S` is the *stake matrix* and :math:`E` is the *exchange matrix* built from horizontal stack of its back and lay columns (:math:`E = \\left[ B \\mid L \\right]`)."
 msgstr ""
 
 #: ../../source/theory.rst:231
-# 302e5f3acd4b4eb1bd9912e5384e4a0e
+# f4cedc3d2ce54a479c5c1f599c840fa1
 msgid "With the exchange matrix is now possible to make an analysis about the value of its determinant:"
 msgstr ""
 
 #: ../../source/theory.rst:238
-# db055ba952a5402395f38f2996c74fd0
+# c13c533fd79e4e36b8e6404df7b7742e
 msgid "This value is only positive if :math:`p_{L}-p_{B}>0` which is in fact the main objective of a trader in single event operations (in order to make profit): contradict the nature of the market by closing a back bet with lower probability than a lay bet, which is the same to say a back odd higher than a lay odd."
 msgstr ""
 
 #: ../../source/theory.rst:244
-# bffcca397463459ba46e3836f5760534
+# 23e5cfcb11524568a9c92767bf7144bd
 msgid "Unlike a *greenbook*, the determinant of the exchange matrix gives us a more general definition of when the customer will be able to make profit."
 msgstr ""
 
 #: ../../source/theory.rst:249
-# 18aa7d4c85294a0383f4d1fca8e68242
+# 1c6c6f38462648199573cc8aa96eb1c3
 msgid "Hedging"
 msgstr ""
 
 #: ../../source/theory.rst:250
-# 7bb0d2b11c934e4fa7aed1085760994b
+# d99bc13d34d841cf887227ab1ecf4edc
 msgid "Let the following problem be enunciated:"
 msgstr ""
 
 #: ../../source/theory.rst:256
-# c8625c8360494a7887f0e33b3d5cb270
+# f705317db5c441c6b8f6b83549ccf974
 msgid "At a time :math:`t_{0}` a trader made a lay bet of :math:`100` € (:math:`s_{L}`) with a 3.15 odd (:math:`p_{L}=0.32`). After a while (:math:`t>t_{0}`), the trader is able to make a back bet with a 5.6 odd (:math:`p_{B}=0.18`). How much should the stake :math:`s_{B}` be?"
 msgstr ""
 
 #: ../../source/theory.rst:262
-# e664798571394f42b3a517feece0f0d4
+# c0057115e9cb48b99940b3b1bcccbccd
 msgid "A problem like this can appear when using the *Lay the Draw* strategy in the beginning of a soccer game. If a strong team plays against a weaker team (colloquially the *underdog*) than the probability that the draw at 0-0 will sustain throughout the game is naturally low. Obviously, there needs to exist an exit strategy (assume the prejudice) for the eventuality that no goal at all is scored. Another tragic eventuality that works against this strategy is when the *underdog* is the first to score."
 msgstr ""
 
 #: ../../source/theory.rst:271
-# 7be3f552afcc49e1a844f66576972e5f
+# 2dfdf207571047ec9ba7d5ef75ace6d4
 msgid "The approach described in this section aims to solve `Problem 1`_ while managing the distribution of profit/loss over all possible events in a dynamic way. `Problem 1`_ has only two possible profits that can relate by the following proportion:"
 msgstr ""
 
 #: ../../source/theory.rst:283
-# 74fd0071bff2477b9c7b7fe9cb176425
+# 2f1a86ec3c9a41e78d9acf0f1ec6de4a
 msgid "where :math:`\\beta` is a coefficient that models the proportion between profits."
 msgstr ""
 
 #: ../../source/theory.rst:286
-# 7c93284572b74adf97fc4c6e50830a4d
+# f3843b2ea8e344d98b923387d619c62b
 msgid "In order to solve this equation, it is important to understand when the house commission is applied. In :ref:`alphaone`, a demonstration is made proving this equation can be solved has if no commission exists. This makes it possible to define the following generic relation:"
 msgstr ""
 
 #: ../../source/theory.rst:294
-# 51d7d824012a4375bd4e64c39610e8ce
+# e2d97fa3de3143c98b86d69c20bf109a
 msgid "In order to achieve a proportion :math:`\\beta` between the returns of a back-lay pair of bets, the proportion between stakes must be the following:"
 msgstr ""
 
 #: ../../source/theory.rst:305
-# ad88551bf3614cd3b3c57a28889148b8
+# f848152fb9564f2b8dcc9aca7ceb11fb
 msgid "where :math:`p_{B}` and :math:`p_{L}` are the implied probabilities of the bets, :math:`s_{B}` and :math:`s_{L}` the stakes."
 msgstr ""
 
 #: ../../source/theory.rst:309
-# 302e5f3acd4b4eb1bd9912e5384e4a0e
+# ddd835e7e4be47649658f4f24902b71f
 msgid "With this rule, it is now possible to manage the returns with the following five conditions."
 msgstr ""
 
 #: ../../source/theory.rst:313
-# 91ce06ff966c4cc591cda739551f0b70
+# 659dbeebcafa46ec828dd6d0753ab3cb
 msgid "1. :math:`H(\\bar{p})=0`"
 msgstr ""
 
 #: ../../source/theory.rst:314
-# 86b715baad824bb4ac9eb249b9c4d579
+# cab7af9e5a544344affe9667514f8d3f
 msgid "The first condition is the easiest one. For this to happen one needs to solve :math:`s_{L}-s_{B}=0` making the second stake equal to the first. In problem `Problem 1`_ the second stake would be :math:`s_{B}=s_{L}=100` €."
 msgstr ""
 
 #: ../../source/theory.rst:320
-# 719bb944155c476195c847e23675fe3f
+# 3cf998c26c7241d39a444f210f6f268d
 msgid "2. :math:`H(p)=0`"
 msgstr ""
 
 #: ../../source/theory.rst:321
-# fddd811399f44835bbd3a8e091db0de9
+# ef699baf71864c7ba78ec9da9fb91574
 msgid "Second condition can be achieved by solving :math:`s_{B}\\times\\frac{1-p_{B}}{p_{B}}=s_{L}\\times\\frac{1-p_{L}}{p_{L }}` which is equivalent to have :math:`\\beta=0`. In `Problem 1`_ the second stake would be :math:`s_{B}=46.74` €."
 msgstr ""
 
 #: ../../source/theory.rst:327
-# 3df20ad1624f474d9d1f2d8392f62645
+# b108b40549e9468689835c97d385e44f
 msgid "3. :math:`H(p)=H(\\bar{p})`"
 msgstr ""
 
 #: ../../source/theory.rst:328
-# a24933feef7f4df0a66b1084237ee2a4
+# 6ff8789e4dca48cdb29f5bb4551b3c44
 msgid "The third approach is solved making :math:`\\beta=1` in equation `genericTradingRelation`_. The last needed stake can be calculated with:"
 msgstr ""
 
 #: ../../source/theory.rst:335
-# a717711ffdb446cca2c449e1ad9fcc39
+# 71f7b0868ebd414bbac8fc01fc174ac4
 msgid "which would give :math:`s_{B}=56.25` € with a profit of 41.56 € in every market."
 msgstr ""
 
 #: ../../source/theory.rst:339
-# ff754867e2d14365812f8a284c556c94
+# 7e90a6dc826143a1a9c52d1f3bb3b842
 msgid "4. :math:`\\frac{H(p)}{P}=\\frac{H(\\bar{p})}{1-P}`"
 msgstr ""
 
 #: ../../source/theory.rst:340
-# 19c00607e76d41d4b818460ca73ce721
+# 60275ffa579e4c6d897d76433a63e160
 msgid ":math:`P` is the trader's expected probability."
 msgstr ""
 
 #: ../../source/theory.rst:342
-# d3402d5bdd7c4c6386d6203ffa3f1532
+# ff15321659df4f0188aa88e3a69726dc
 msgid "In the fourth, we make :math:`\\beta=\\frac{P}{1-P}`. This relation makes the expected profit the same in any possible situation. The difficulty here, is to set the value of :math:`P`. A simple solution is to use the implicit probability that the market has established for the event at that moment: in problem `Problem 1`_, the odd 5.6 means an implied probability of :math:`P = 0.18`. which gives :math:`s_{B}=49.16` € with :math:`H(p)=10.6` € and :math:`H(\\bar{p})=48.29` €."
 msgstr ""
 
 #: ../../source/theory.rst:353
-# f4281b97fc3a4490a27e4a8e1261abd7
+# 6df58a9714be45408cba6a08fbcc60f7
 msgid "5. :math:`\\frac{H(p)}{(1+\\delta)}=\\frac{H(\\bar{p})}{(1-\\delta)}`"
 msgstr ""
 
 #: ../../source/theory.rst:354
-# 67769deaf4f24cfc989322a17b958b0f
+# 883788daa39749319a6df385b32d4cde
 msgid ":math:`\\beta=\\frac{1+\\delta}{1-\\delta}` where :math:`\\delta` is a bias operator provided in the following manner:"
 msgstr ""
 
 #: ../../source/theory.rst:364
-# 19c00607e76d41d4b818460ca73ce721
+# f5329a57a6d54ff9b012539f15ca9741
 msgid "where :math:`\\gamma` is an unknown central profit."
 msgstr ""
 
 #: ../../source/theory.rst:366
-# 3019614b7b7747f88728109ab2e2f5b2
+# 2161412daf924df9b50e999281ddd74f
 msgid "An expected, and obvious, result is that when :math:`\\delta \\rightarrow 0` this relation becomes the same as if :math:`\\beta = 1`."
 msgstr ""
 
 #: ../../source/theory.rst:374
-# 36fe23ffb40548d3974ef8ffed24bd55
+# c485fc46c52d4475baf8cfc6ceeec040
 msgid "References"
 msgstr ""
 
 #: ../../source/theory.rst:375
-# 1b53e2b8c6f14faab714cbc063f6c232
+# c54d32a39e394b06ae145f574e7a96a5
 msgid "http://www.betfair.com/"
 msgstr ""
 
 #: ../../source/theory.rst:377
-# 8430de26eade4eac8b7fccdf3400816a
+# ec82f1cc27094f3e8de04e4405372154
 msgid "Mark Davies, Leyland Pitt, Daniel Shapiro, and Richard Watson. Betfair.com: Five technology forces revolutionize worldwide wagering. European Management Journal, 23:533–541, 2005."
 msgstr ""
 
 #: ../../source/theory.rst:381
-# 6f296449dd9e4273a81569ce1cfe20af
+# 46ffbbebad5a45d3b698bc6559dfd848
 msgid "Des Laffey. Entrepreneurship and innovation in the uk betting industry: The rise of person-to-person betting. European Management Journal, 23:351–359, 2005."
 msgstr ""
 
 #: ../../source/theory.rst:388
-# f71afe672a3e450b96c11422fb502cd2
+# ac295ca78ab846149aaa552559f0f01a
 msgid "Appendix A -- Expected Value and Variance"
 msgstr ""
 
 #: ../../source/theory.rst:389
-# e5c67fd866d146df9432eeba6d1699d0
+# f28b4fd0f6e042d5af72ff4f6fa30c3b
 msgid "First we need to suppose a value to the real probability that the event will happen, :math:`P`. Normally a simple solution is to use the implied probability that the market has established for the event at that moment. More complex approaches can be made with the retrieval of probabilistic information from external sources to the exchange or with the estimation of a trend of the market."
 msgstr ""
 
 #: ../../source/theory.rst:396
-# 41b1120c436042328286b5b408ece9a6
+# 66dc3fa8c530421d8ae89348d1ef8307
 msgid "The expected value of a bet is normally called *the value of the bet*. This term is unfortunate since it is easily confused with the stake of the bet in languages other than English."
 msgstr ""
 
 #: ../../source/theory.rst:401
-# 1a1bacb09d234d1cac204a5280031baa
+# 7089159f3c3c4c0aa97b564e91fc45cd
 msgid "Back"
 msgstr ""
 
 #: ../../source/theory.rst:402
-# 7df3ee0c906740dabec25ae9e498d404
+# a0012a6f802e43b180db798b88eb0fc2
 msgid "The expected value of a back bet with real probability :math:`P` is:"
 msgstr ""
 
 #: ../../source/theory.rst:407
 #: ../../source/theory.rst:419
-# 88053b531c384ad0801dc2cadc52bd21
-# 88053b531c384ad0801dc2cadc52bd21
+# 422166a2edaf433dae7b644052433a6d
+# f2788d8973534becb80c1cb4224ce751
 msgid "The variance is:"
 msgstr ""
 
 #: ../../source/theory.rst:413
-# eb125e980298416bbba2e87bd832a811
+# 6b1f05e593bb4606a95a9a8939f7afd8
 msgid "Lay"
 msgstr ""
 
 #: ../../source/theory.rst:414
-# b38b1b58ae9f45d9bf337e79aecc0861
+# 37b572f0a5e444f4bd9a0c202ef4436c
 msgid "The expected value of a lay bet with probability :math:`P` is:"
 msgstr ""
 
 #: ../../source/theory.rst:427
-# 0ab93c96c5944866a00a91da8aee8fa2
+# 0fb580ae80454d1dbb472b8395e92804
 msgid "Appendix B -- Back-Lay Commission Simplification"
 msgstr ""
 
 #: ../../source/theory.rst:428
-# 42f2eaab80424cafa0570944728b7157
+# fd3b0531d05e412199185b3bad2a5d72
 msgid "Observing the behaviour of :math:`H` in equation `tradingeq`_, the following conditions are easily noted:"
 msgstr ""
 
 #: ../../source/theory.rst:438
-# aea6cd2dbaf74b4581e4ddc1a315ce38
+# cbb01907d143478b950728fafe87a36a
 msgid "Equation `tradingeq`_ can now be rewritten in the following way:"
 msgstr ""
 
 #: ../../source/theory.rst:446
-# 8f26c788e0a64acb95f55c0d499cbea4
+# cd0dc81e2a79483cbcd26336f0482667
 msgid "where :math:`\\alpha` is"
 msgstr ""
 
 #: ../../source/theory.rst:456
-# af1f7470373c429cb7ff7b62d9b52383
+# b1abd311d642492c8ac0d57444840a5f
 msgid "The problem now is that :math:`C_{1}` and :math:`C_{2}` depend on the values of the stakes, which are the values we are trying to model. This said, both conditions will be solved in order to the implicit probabilities. Equation `alphaBetaTrading`_ can be simplified to the following form:"
 msgstr ""
 
 #: ../../source/theory.rst:466
-# b3cdf0b6ee0e429382fcdf9826929543
+# 65779e31c7d2478e88257ea44282dc1b
 msgid "The first condition becomes:"
 msgstr ""
 
 #: ../../source/theory.rst:474
-# 5a044179f01f455e8b0e1b046c416043
+# cb9a4f958b33480485f0d0284f61bcc1
 msgid "And the second:"
 msgstr ""
 
 #: ../../source/theory.rst:484
-# 685c972124684d70a5d90df77a2bddad
+# 314563d1ceae4acaba0bae2323ea3409
 msgid "Concluding that :math:`C_{1} \\Leftrightarrow C_{2}` which tells us that :math:`\\alpha=1`."
 msgstr ""
 

@@ -2,8 +2,8 @@ Trader Calculator
 =================
     - *Documentation also available in:* `Português <../pt/index.html>`_
       |portugal|
-    - *Download the latest version for your platform at* `github 
-      <https://github.com/ffunenga/traderCalculator/tree/master/deploy/dist>`_
+    - *Download the latest version for your platform at* `https://box.com/trader-calculator/ 
+      <https://box.com/trader-calculator/>`_
 
 .. |portugal| image:: images/pt.png
 .. |england| image:: images/en.png

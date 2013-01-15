@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Trader Calculator 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-12 10:50\n"
-"PO-Revision-Date: 2013-01-12 10:52+0100\n"
+"POT-Creation-Date: 2013-01-15 13:53\n"
+"PO-Revision-Date: 2013-01-15 13:54+0100\n"
 "Last-Translator: Filipe Funenga <filipe.funenga@ist.utl.pt>\n"
 "Language-Team: MaingTeam <filipe.funenga@ist.utl.pt>\n"
 "Language: pt_BR\n"
@@ -24,8 +24,8 @@ msgid "*Documentation also available in:* `Português <../pt/index.html>`_ |port
 msgstr "*Documentação também disponível em:* `English <../en/index.html>`_ |england|"
 
 #: ../../source/index.rst:5
-msgid "*Download the latest version for your platform at* `github <https://github.com/ffunenga/traderCalculator/tree/master/deploy/dist>`_"
-msgstr "*Faça download da última versão para a sua plataforma no* `github <https://github.com/ffunenga/traderCalculator/tree/master/deploy/dist>`_."
+msgid "*Download the latest version for your platform at* `https://box.com/trader-calculator/ <https://box.com/trader-calculator/>`_"
+msgstr "*Faça download da última versão para a sua plataforma em* `https://box.com/trader-calculator/ <https://box.com/trader-calculator/>`_."
 
 #: ../../source/index.rst:12
 msgid "Introduction"
