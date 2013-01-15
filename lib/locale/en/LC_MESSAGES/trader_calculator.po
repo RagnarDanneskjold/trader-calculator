@@ -1,0 +1,140 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Trader Calculator\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Filipe Funenga <filipe.funenga@ist.utl.pt>\n"
+"Language-Team: MainTeam <filipe.funenga@ist.utl.pt>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Basepath: /home/ffunenga/documents/others\n"
+"X-Poedit-SearchPath-0: /home/ffunenga/documents/others/exchange/traderCalculator/lib\n"
+
+msgid ""
+"Trader Calculator is an eficient tool for the \n"
+"betting exchange users. \n"
+"\n"
+"Features include optimized keyboard \n"
+"navigation, updated results on every \n"
+"keypress, setting of bias between back/lay \n"
+"profits and more."
+msgstr ""
+"Trader Calculator is an eficient tool for the \n"
+"betting exchange users. \n"
+"\n"
+"Features include optimized keyboard \n"
+"navigation, updated results on every \n"
+"keypress, setting of bias between back/lay \n"
+"profits and more."
+
+msgid "Trader Calculator"
+msgstr "Trader Calculator"
+
+msgid "Back Odd"
+msgstr "Back Odd"
+
+msgid "Back Stake"
+msgstr "Back Stake"
+
+msgid "Lay Odd"
+msgstr "Lay Odd"
+
+msgid "Lay Stake"
+msgstr "Lay Stake"
+
+msgid "Menubar"
+msgstr "Menubar"
+
+msgid "Calculator"
+msgstr "Calculator"
+
+msgid "Preferences\tAlt+Enter"
+msgstr "Preferences\tAlt+Enter"
+
+msgid "Quit\tCtrl+Q"
+msgstr "Quit\tCtrl+Q"
+
+msgid "Edit"
+msgstr "Edit"
+
+msgid "Clear Textbox\tSpace"
+msgstr "Clear Textbox\tSpace"
+
+msgid "Clear All Values\tCtrl+K"
+msgstr "Clear All Values\tCtrl+K"
+
+msgid "Set as Unknown\tCtrl+U"
+msgstr "Set as Unknown\tCtrl+U"
+
+msgid "Help"
+msgstr "Help"
+
+msgid "Documentation\tF1"
+msgstr "Documentation\tF1"
+
+msgid "About"
+msgstr "About"
+
+msgid "Odd"
+msgstr "Odd"
+
+msgid "Stake"
+msgstr "Stake"
+
+msgid "Profits"
+msgstr "Profits"
+
+msgid "Back"
+msgstr "Back"
+
+msgid "Lay"
+msgstr "Lay"
+
+msgid "Commission"
+msgstr "Commission"
+
+msgid "Bias"
+msgstr "Bias"
+
+msgid "Language"
+msgstr "Language"
+
+msgid "Verbosisty Level"
+msgstr "Verbosisty Level"
+
+msgid "Cancel"
+msgstr "Cancel"
+
+msgid "Ok"
+msgstr "Ok"
+
+msgid "Preferences"
+msgstr "Preferences"
+
+msgid "Configure the application preferences"
+msgstr "Configure the application preferences"
+
+msgid "Exits the application"
+msgstr "Exits the application"
+
+msgid "Clears focused textbox"
+msgstr "Clears focused textbox"
+
+msgid "Clears odds and stakes"
+msgstr "Clears odds and stakes"
+
+msgid "Set textbox as unknown"
+msgstr "Set textbox as unknown"
+
+msgid "Shows the documentation"
+msgstr "Shows the documentation"
+
+msgid "Shows credits and license"
+msgstr "Shows credits and license"
+
+#~ msgid "File"
+#~ msgstr "File"

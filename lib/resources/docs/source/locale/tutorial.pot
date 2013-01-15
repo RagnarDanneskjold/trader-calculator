@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, Filipe Funenga
+# This file is distributed under the same license as the Trader Calculator package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Trader Calculator 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-12 10:53\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/tutorial.rst:2
+# 7d252288fa674b229e2d02dbda35a400
+msgid "How to Use the Calculator"
+msgstr ""
+
+#: ../../source/tutorial.rst:3
+# c45bb60512624ae3a75cae10c97edd26
+msgid "The calculator has a total of six editable text boxes, where four can be used to input values (odds and stakes) and the other two to insert parameters (commission and bias)."
+msgstr ""
+
+#: ../../source/tutorial.rst:7
+# 93f5a4dec7ef471b84882183acecd626
+msgid "The keyboard configuration implemented (see :ref:`navigation` and :ref:`clearing`), allows the user to efficiently insert values with a *desktop keyboard* by placing his two hands in the following way: the left hand can be placed on the left side with the index finger on the *TAB* key and the thumb alternating between the *SPACE* and *SHIFT* keys; the right hand can be used to press the numeric pad and arrows."
+msgstr ""
+
+#: ../../source/tutorial.rst:22
+# 1c35eec136c740a98717632ff2d9cf50
+msgid "Navigation"
+msgstr ""
+
+#: ../../source/tutorial.rst:23
+# cdb6f5e1da034a2ca39d6d186385f1b5
+msgid "Navigation between text boxes is made with the *TAB* and *ENTER* keys. *SHIFT* reverses the orientation."
+msgstr ""
+
+#: ../../source/tutorial.rst:26
+# 686f2d2b2149441d9ecf8fe07c1d72ba
+msgid "The order of the text boxes was defined based on the following assumption: when a trader is observing a market, he is first focused on the odds, and posteriorly on the stakes."
+msgstr ""
+
+#: ../../source/tutorial.rst:33
+# b4271b1a900344c19bbc7570f1062ea4
+msgid "In order to navigate in the opposite direction, just hold the *SHIFT* key while pressing *TAB* or *ENTER*."
+msgstr ""
+
+#: ../../source/tutorial.rst:37
+# 700e9da936b34ed6bf7b9ab19b93cd93
+msgid "Inserting Values"
+msgstr ""
+
+#: ../../source/tutorial.rst:38
+# e8fc8bcd6fe34a2fbab269ac11f765f9
+msgid "Values can be inserted like a Python [1]_ float represented in a string that will be parsed by the built-in function float [2]_:"
+msgstr ""
+
+#: ../../source/tutorial.rst:41
+# 3706864ee69b41209ac2a5bea1e752f7
+msgid "\".03\""
+msgstr ""
+
+#: ../../source/tutorial.rst:42
+# 7c0165933d444087932bdf27130f8a8a
+msgid "\"2.4\""
+msgstr ""
+
+#: ../../source/tutorial.rst:43
+# 857a8c66fe5d4d499981b29576e47a22
+msgid "\"-2\""
+msgstr ""
+
+#: ../../source/tutorial.rst:45
+# 2e9895abbb5d4c24b8bf0706e114c806
+msgid "If there is any error with the input, the calculator is robust enough and will change the background colour to red and cancel the output of results."
+msgstr ""
+
+#: ../../source/tutorial.rst:52
+# 794fe4c55fb84b8d990dec6ecc57c930
+msgid "The insertion of values can be further improved by using the arrow keys *UP* and *DOWN* to add/subtract 0.01 to the current value."
+msgstr ""
+
+#: ../../source/tutorial.rst:55
+# a12dc9ff1e72405e965853aeb7881612
+msgid "http://python.org"
+msgstr ""
+
+#: ../../source/tutorial.rst:56
+# ae379ecb232545afbdca08c38d9ee9a7
+msgid "http://docs.python.org/2/library/functions.html#float"
+msgstr ""
+
+#: ../../source/tutorial.rst:61
+# 01c1dec9f11e4b80a9a66883a66f85a7
+msgid "Clearing the Text boxes"
+msgstr ""
+
+#: ../../source/tutorial.rst:62
+# 0a60123dd278449c8eee3d6005484284
+msgid "In case of mistake, or any other reason, the value in the text box can be corrected by either using the *BACKSPACE* key with the arrows *LEFT* and *RIGHT* or by erasing the entire value with the *SPACE* key."
+msgstr ""
+
+#: ../../source/tutorial.rst:67
+# e1e5590e762947eebf04afdd95f5599c
+msgid "In most cases, the last approach is preferred since the user will be using two hands: the left hand to press *SPACE* and the right hand in the numeric pad to introduce the new value."
+msgstr ""
+
+#: ../../source/tutorial.rst:71
+# e10f057ac6d8446dbae088c59eec35a8
+msgid "In case of apocalypse, or just because the context has changed, the user can always rely on *CTRL+K* to return to the beginning by cleaning all the text boxes."
+msgstr ""
+
+#: ../../source/tutorial.rst:76
+# 30edddb5c40144588e9c232f4bad09f4
+msgid "Getting Results"
+msgstr ""
+
+#: ../../source/tutorial.rst:77
+# 1fced3823fe44c408e51d02d782ab56e
+msgid "The application tries to automatically calculate the needed results every time a new character is introduced in any of the editable text boxes."
+msgstr ""
+
+#: ../../source/tutorial.rst:84
+# 14cbb9d989384c2a9910a52bd224f2b7
+msgid "Its important to notice that once the user fills three text boxes, he is implicitly indicating that he wants to find value of the fourth text box. This means that the last box is the *unknown* variable and that it is no longer editable."
+msgstr ""
+
+#: ../../source/tutorial.rst:89
+# f505aae663cd4692b8c3f1a3f449eaff
+msgid "In order to change the *unknown* variable the *CTRL+U* keys can be pressed when the wanted variable is focused. Another way to change the *unknown* variable is by *resetting* the calculator (see :ref:`clearing`)."
+msgstr ""
+
+#: ../../source/tutorial.rst:98
+# dc610d19670849babb2c030b9d139d4d
+msgid "Introducing Bias"
+msgstr ""
+
+#: ../../source/tutorial.rst:99
+# 11fb6e5f09e0433ab4bea8b7128d0977
+msgid "Bias between the profits can be setted in the interval [-1, 1]."
+msgstr ""
+

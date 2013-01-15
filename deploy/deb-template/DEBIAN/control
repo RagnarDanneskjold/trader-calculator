@@ -1,0 +1,8 @@
+Package: trader-calculator
+Version: 0.1
+Section: tools
+Maintainer: Filipe Funenga <filipe.funenga@ist.utl.com>
+Architecture: all
+Depends:
+Description: Trader Calculator
+ A simple tool for users of betting exchanges

@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, Filipe Funenga
+# This file is distributed under the same license as the Trader Calculator package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Filipe Funenga <filipe.funenga@ist.utl.pt>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Trader Calculator 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-12 10:50\n"
+"PO-Revision-Date: 2013-01-12 10:53+0100\n"
+"Last-Translator: Filipe Funenga <filipe.funenga@ist.utl.pt>\n"
+"Language-Team: MainTeam <filipe.funenga@ist.utl.pt>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: pt_BR\n"
+
+#: ../../source/tutorial.rst:2
+msgid "How to Use the Calculator"
+msgstr "Como Utilizar a Calculadora"
+
+#: ../../source/tutorial.rst:3
+msgid "The calculator has a total of six editable text boxes, where four can be used to input values (odds and stakes) and the other two to insert parameters (commission and bias)."
+msgstr "A calculadora tem um total de seis caixas de texto editáveis, onde quatro podem ser utilizadas para introduzir valores (odds e quantias) e outras duas para inserir parâmetros (comissão e desequilíbrio)."
+
+# 93f5a4dec7ef471b84882183acecd626
+#: ../../source/tutorial.rst:7
+msgid "The keyboard configuration implemented (see :ref:`navigation` and :ref:`clearing`), allows the user to efficiently insert values with a *desktop keyboard* by placing his two hands in the following way: the left hand can be placed on the left side with the index finger on the *TAB* key and the thumb alternating between the *SPACE* and *SHIFT* keys; the right hand can be used to press the numeric pad and arrows."
+msgstr "A configuração do teclado implementada (ver :ref:`navigation` e :ref:`clearing`), permite ao utilizador uma inserção eficiente de valores com um *teclado para desktop* ao posicionar as suas duas mãos da seguinte forma: a mão esquerda pode ser colocada no lado esquerdo do teclado com dedo indicador na tecla *TAB* e o polegar alternando entre as teclas *ESPAÇO* e *SHIFT*; a mão direita pode ser utilizada para premir o teclado numérico e setas."
+
+#: ../../source/tutorial.rst:22
+msgid "Navigation"
+msgstr "Navegação"
+
+# cdb6f5e1da034a2ca39d6d186385f1b5
+#: ../../source/tutorial.rst:23
+msgid "Navigation between text boxes is made with the *TAB* and *ENTER* keys. *SHIFT* reverses the orientation."
+msgstr "A navegação entre caixas de texto é realizada com as teclas *TAB* e *ENTER*. A tecla *SHIFT*, quando premida em conjunto com as anteriores, inverte o sentido de navegação."
+
+# 686f2d2b2149441d9ecf8fe07c1d72ba
+#: ../../source/tutorial.rst:26
+msgid "The order of the text boxes was defined based on the following assumption: when a trader is observing a market, he is first focused on the odds, and posteriorly on the stakes."
+msgstr "A ordem das caixas de texto foi definida com base na seguinte suposição: quando um *trader* está a observar o mercado, este está concentrado em primeiro lugar nas odds e em seguida nas quantias."
+
+# b4271b1a900344c19bbc7570f1062ea4
+#: ../../source/tutorial.rst:33
+msgid "In order to navigate in the opposite direction, just hold the *SHIFT* key while pressing *TAB* or *ENTER*."
+msgstr "De forma a navegar na direcção contrária basta premir a tecla *SHIFT* em conjunto com uma das teclas *TAB* ou *ENTER*."
+
+#: ../../source/tutorial.rst:37
+msgid "Inserting Values"
+msgstr "Inserir Valores"
+
+# e8fc8bcd6fe34a2fbab269ac11f765f9
+#: ../../source/tutorial.rst:38
+msgid "Values can be inserted like a Python [1]_ float represented in a string that will be parsed by the built-in function float [2]_:"
+msgstr "Os valores podem ser representados como *floats* \"pythonicos\" [1]_, isto é, estes serão analisados pela função *float* [2]_, *built-in* da linguagem de programação Python:"
+
+# 3706864ee69b41209ac2a5bea1e752f7
+#: ../../source/tutorial.rst:41
+msgid "\".03\""
+msgstr "\".03\""
+
+# 7c0165933d444087932bdf27130f8a8a
+#: ../../source/tutorial.rst:42
+msgid "\"2.4\""
+msgstr "\"2.4\""
+
+# 857a8c66fe5d4d499981b29576e47a22
+#: ../../source/tutorial.rst:43
+msgid "\"-2\""
+msgstr "\"-2\""
+
+# 2e9895abbb5d4c24b8bf0706e114c806
+#: ../../source/tutorial.rst:45
+msgid "If there is any error with the input, the calculator is robust enough and will change the background colour to red and cancel the output of results."
+msgstr "Se existir algum erro em algum dos valores introduzidos, a calculadora é robusta o suficiente e irá alterar a cor de fundo para vermelho, além de cancelar a apresentação de resultados."
+
+# 794fe4c55fb84b8d990dec6ecc57c930
+#: ../../source/tutorial.rst:52
+msgid "The insertion of values can be further improved by using the arrow keys *UP* and *DOWN* to add/subtract 0.01 to the current value."
+msgstr "A introdução de valores pode ser ainda mais optimizada ao serem utilizadas as setas *CIMA* e *BAIXO* para adicionar/subtrair 0.01 ao valor actual da caixa de texto."
+
+#: ../../source/tutorial.rst:55
+msgid "http://python.org"
+msgstr "http://python.org"
+
+# ae379ecb232545afbdca08c38d9ee9a7
+#: ../../source/tutorial.rst:56
+msgid "http://docs.python.org/2/library/functions.html#float"
+msgstr "http://docs.python.org/2/library/functions.html#float"
+
+#: ../../source/tutorial.rst:61
+msgid "Clearing the Text boxes"
+msgstr "Limpar Caixas de Texto"
+
+# 0a60123dd278449c8eee3d6005484284
+#: ../../source/tutorial.rst:62
+msgid "In case of mistake, or any other reason, the value in the text box can be corrected by either using the *BACKSPACE* key with the arrows *LEFT* and *RIGHT* or by erasing the entire value with the *SPACE* key."
+msgstr "Em caso de erro, ou outra qualquer razão, o valor na caixa de texto focada pode ser corrigido com a utilização das teclas *BACKSPACE* e setas *ESQUERDA* e *DIREITA* ou então com a tecla *ESPAÇO* de forma a apagar tudo o que estiver na caixa de texto."
+
+# e1e5590e762947eebf04afdd95f5599c
+#: ../../source/tutorial.rst:67
+msgid "In most cases, the last approach is preferred since the user will be using two hands: the left hand to press *SPACE* and the right hand in the numeric pad to introduce the new value."
+msgstr "Na maior parte dos casos, a última abordagem é preferida já que o utilizador faz uso das duas mãos: a mão esquerda encontra-se a premir *ESPAÇO* e a mão direita encontrar-se-à no teclado numérico para introduzir o novo valor."
+
+# e10f057ac6d8446dbae088c59eec35a8
+#: ../../source/tutorial.rst:71
+msgid "In case of apocalypse, or just because the context has changed, the user can always rely on *CTRL+K* to return to the beginning by cleaning all the text boxes."
+msgstr "Em caso de holocausto, ou simplesmente porque o contexto mudo, o utilizador pode sempre depender no atalho *CTRL+K* para voltar ao inicio limpando todas as caixas de texto."
+
+#: ../../source/tutorial.rst:76
+msgid "Getting Results"
+msgstr "Obter Resultados"
+
+# 1fced3823fe44c408e51d02d782ab56e
+#: ../../source/tutorial.rst:77
+msgid "The application tries to automatically calculate the needed results every time a new character is introduced in any of the editable text boxes."
+msgstr "A aplicação tenta calcular automaticamente os resultados necessários de cada vez que um caractere é introduzido numa das caixas de texto editáveis."
+
+# 14cbb9d989384c2a9910a52bd224f2b7
+#: ../../source/tutorial.rst:84
+msgid "Its important to notice that once the user fills three text boxes, he is implicitly indicating that he wants to find value of the fourth text box. This means that the last box is the *unknown* variable and that it is no longer editable."
+msgstr "É importante notar que uma vez preenchidos três caixas de texto, o utilizador está a indicar implicitamente que quer achar o valor da quarta caixa de texto. Isto significa que esta última caixa é a *variável desconhecida* e que não poderá voltar a ser editada pelo utilizador."
+
+# f505aae663cd4692b8c3f1a3f449eaff
+#: ../../source/tutorial.rst:89
+msgid "In order to change the *unknown* variable the *CTRL+U* keys can be pressed when the wanted variable is focused. Another way to change the *unknown* variable is by *resetting* the calculator (see :ref:`clearing`)."
+msgstr "De forma a alterar a *variável desconhecida*"
+
+#: ../../source/tutorial.rst:98
+msgid "Introducing Bias"
+msgstr "Introduzir Desiquilibrio"
+
+#: ../../source/tutorial.rst:99
+msgid "Bias between the profits can be setted in the interval [-1, 1]."
+msgstr "O valor para o desequilíbrio pode ser estabelecido no intervalo [-1,1]."
+

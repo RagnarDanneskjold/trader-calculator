@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.1
+Name=Trader Calculator
+GenericName=Trader Calculator
+Comment=A simple tool for users of betting exchanges
+Exec=/usr/share/trader-calculator/trader-calculator
+Terminal=false
+Icon=trader-calculator.svg
+Type=Application
+Categories=Utility;Application;Calculator;

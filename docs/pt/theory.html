@@ -1,0 +1,556 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Introdução à Bolsa de Apostas &mdash; Trader Calculator 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/solar.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="shortcut icon" href="_static/icon.ico"/>
+    <link rel="top" title="Trader Calculator 0.1 documentation" href="index.html" />
+    <link rel="prev" title="Como Utilizar a Calculadora" href="tutorial.html" /><link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+<link href="_static/solarized-dark.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navegação</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="tutorial.html" title="Como Utilizar a Calculadora"
+             accesskey="P">anterior</a></li>
+        <li><a href="index.html">Calculadora de Trading</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Tabela de Conteúdo</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Introdução à Bolsa de Apostas</a><ul>
+<li><a class="reference internal" href="#betting-exchange">Bolsa de Apostas</a></li>
+<li><a class="reference internal" href="#decimal-odds-and-probabilities">Odds Decimais e Probabilidades</a></li>
+<li><a class="reference internal" href="#betting-terminology">Terminologia no Mundo das Apostas</a></li>
+<li><a class="reference internal" href="#the-back-lay-pair">O Par <em>A Favor</em>/<em>Contra</em></a><ul>
+<li><a class="reference internal" href="#hedging">Hedging</a><ul>
+<li><a class="reference internal" href="#id4">1. <img class="math" src="_images/math/f6faa56a9a976fb212a77ff6c6e833716b10c496.png" alt="H(\bar{p})=0"/></a></li>
+<li><a class="reference internal" href="#id5">2. <img class="math" src="_images/math/46fc45bbebd1c5897d73516f8345a66a543c4c38.png" alt="H(p)=0"/></a></li>
+<li><a class="reference internal" href="#id6">3. <img class="math" src="_images/math/7148f0bf37793844cbf06658607af6e33ec1bece.png" alt="H(p)=H(\bar{p})"/></a></li>
+<li><a class="reference internal" href="#id7">4. <img class="math" src="_images/math/0d1c1070a9b5e8fa603e2e9dc9251a3eee89411b.png" alt="\frac{H(p)}{P}=\frac{H(\bar{p})}{1-P}"/></a></li>
+<li><a class="reference internal" href="#id8">5. <img class="math" src="_images/math/bc9d5f471131c316ea89f8f71f388bd48eb69093.png" alt="\frac{H(p)}{(1+\delta)}=\frac{H(\bar{p})}{(1-\delta)}"/></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#references">Referências</a></li>
+<li><a class="reference internal" href="#appendix-a-expected-value-and-variance">Apêndice A &#8211; Valor Esperado e Variância</a><ul>
+<li><a class="reference internal" href="#back">A Favor</a></li>
+<li><a class="reference internal" href="#lay">Contra</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#appendix-b-back-lay-commission-simplification">Apêndice B &#8211; Simplificação da Comissão <em>A Favor</em>/<em>Contra</em></a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Tópico anterior</h4>
+  <p class="topless"><a href="tutorial.html"
+                        title="capítulo anterior">Como Utilizar a Calculadora</a></p>
+  <h3>Esta Página</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/theory.txt"
+           rel="nofollow">Exibir Fonte</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Pesquisa rápida</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Ir" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Digite os termos da busca ou o nome de um módulo, classe ou função.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <p><em>AVISO: Não esquecer a citação deste artigo caso seja copiada alguma informação. A versão inglesa em pdf pode ser consultada</em> <a class="reference external" href="../article">aqui</a>.</p>
+<div class="section" id="introduction-to-the-betting-exchange">
+<h1>Introdução à Bolsa de Apostas<a class="headerlink" href="#introduction-to-the-betting-exchange" title="Link permanente para este título">¶</a></h1>
+<p>Filipe Funenga &#8211; Lisboa, Portugal &#8211; Setembro 18, 2012</p>
+<div class="topic">
+<p class="topic-title first">Abstract</p>
+<p>A basic introduction is made to trading in a betting exchange.
+Beyond analysing the central system of equations for trading in
+its matrix form, an equation is provided aiming at a dynamic
+configuration of the proportion between returns. Also, various
+approaches are presented, denoting the possibility for a trader
+to manage the profits based on his expectation of the event.</p>
+</div>
+<div class="section" id="betting-exchange">
+<h2>Bolsa de Apostas<a class="headerlink" href="#betting-exchange" title="Link permanente para este título">¶</a></h2>
+<p>An online betting exchange is a web service where users can, among
+other things, trade contracts with each other about the outcome of
+future random events. The pay-off of these contracts can either be
+some fixed amount of money or nothing at all. The main innovation of
+this system, compared to traditional bookmakers, lies in providing a
+method to set fixed odds against an outcome &#8211; known as <em>laying</em> &#8211;
+and invite other users to bet in favour of the outcome &#8211; know as
+<em>backing</em>. This type of freedom had previously been reserved only to
+bookmakers.</p>
+<p>The betting exchange concept, envisioned and created by Betfair
+<img class="math" src="_images/math/db2ddb31849f079aafb635759c5992d75e76e454.png" alt="\textsuperscript{\textregistered}"/> <a class="footnote-reference" href="#id9" id="id1">[1]</a> in 2000, has
+revolutionized sports and race wagering, attracting the attention of
+sports bodies, major competitors and governments, who seem uncertain
+about how to deal with this revolutionary transaction system, as
+well as customers globally, who are attracted by the far superior
+value proposition offered. <a class="footnote-reference" href="#id10" id="id2">[2]</a> Smaller companies exist but Betfair
+<img class="math" src="_images/math/db2ddb31849f079aafb635759c5992d75e76e454.png" alt="\textsuperscript{\textregistered}"/> is considered to have a
+virtual monopoly.</p>
+<p>In facilitating betting as a neutral intermediary the company
+responsible for maintaining the exchange generates revenue by taking
+a commission from the winner of the contract. This means that the
+company is only interested in maximizing the amount of money
+transacted between users and that it has no vested interest in the
+outcome of the events. The commission charged is calculated as a
+percentage of net winnings for each customer on each event, or
+market. The final value that the customer will get can be calculated
+with the <em>house function</em>, <img class="math" src="_images/math/b1902d279ba37d60bdce4e0e987b7cd19d48974e.png" alt="H"/>, which is formulated in the
+following manner:</p>
+<div class="math" id="equation-eq:commision">
+<p><span class="eqno">(1)</span><img src="_images/math/47e6678373e292843f603a09b17827fe4330b91e.png" alt="H(x) = \left\{
+\begin{array}{l l}
+    x              &amp; \quad \text{if x $\leq$ 0}\\
+    x \times (1-h) &amp; \quad \text{if x $&gt;$ 0}\\
+\end{array} \right."/></p>
+</div><p>where <img class="math" src="_images/math/8189a5b5a0917b8c93350827be4038af1839139d.png" alt="h"/> is the house percentage (normally 0.05).</p>
+<p>The neutral position makes customers, whose betting activities have
+traditionally been &#8220;restricted&#8221; by bookmakers (normally successful
+users that won too much money), able to place bets only limited by
+market liquidity. <a class="footnote-reference" href="#id11" id="id3">[3]</a></p>
+</div>
+<div class="section" id="decimal-odds-and-probabilities">
+<span id="decimaloddsandprobabilities"></span><h2>Odds Decimais e Probabilidades<a class="headerlink" href="#decimal-odds-and-probabilities" title="Link permanente para este título">¶</a></h2>
+<p>Traditional odds in favour of an event, <img class="math" src="_images/math/87d491c1f7759f604e7fe7bdfdf4ae014d7fdf6a.png" alt="O_{t}"/>, is the ratio
+of the probability that an event will happen to the probability that
+it will not happen. For example, the traditional odds that a
+randomly chosen day of the week is a Sunday are one to six, which is
+written <img class="math" src="_images/math/f34b3cf20be89133434c1a52cb3bbc3342a16664.png" alt="1/6"/> or 1:6.</p>
+<p>Decimal Odds, <img class="math" src="_images/math/6cee8ef36c0f144c4e389a261425e6e7dd35ff50.png" alt="O_{d}"/>, are simpler to use than traditional
+ones and are the most common form of odds quoted in countries
+outside the UK. Unlike the traditional interpretation, the customer
+stake is included as part of his total return,
+<img class="math" src="_images/math/a3f96743560ceeffd846c1334bda296f3361a4aa.png" alt="O_{t}=O_{d}+1"/>, relating more closely to the concept of
+probability. In the previous example, each day of the week has
+decimal odds of 7.0.</p>
+<p>The implied probability of an outcome described by decimal odds,
+equals 1 divided by its odds:</p>
+<div class="math">
+<p><img src="_images/math/8a674ca1f1264ae320e40d2d2afef357e57017e8.png" alt="\text{Probability}=\frac{1}{O_{d}}=\frac{1}{O_{t}-1}"/></p>
+</div><p>which concludes that everyday there is a <img class="math" src="_images/math/351c6af3bf0a6c3363173e6effed184c7ea94d62.png" alt="\frac{1}{7} = 14.3\%"/>
+chance of being Sunday.</p>
+<p>This means that when a customer makes a bet, he is actually making a
+financial commitment about his expectations on the outcome of an
+event through the implied probability of the bet. As we will see in
+appendix <a class="reference internal" href="#expectedvariance"><em>Apêndice A &#8211; Valor Esperado e Variância</em></a>, the expected value of bets depend
+on a relation between the real probability of the event and the
+implicit probability of the bet.</p>
+</div>
+<div class="section" id="betting-terminology">
+<h2>Terminologia no Mundo das Apostas<a class="headerlink" href="#betting-terminology" title="Link permanente para este título">¶</a></h2>
+<p>Various terms are nowadays well established to characterize the way
+betting exchange&#8217;s customers build their sets of bets.</p>
+<p>First of all, clear distinctions arise related to the number of
+betted events. If the set only backs and/or lays one event, than it
+is said that the costumer is <em>Hedging</em>. On the contrary, if more
+than one event is betted upon, than its called <em>Dutching</em>.</p>
+<p>A particular case of <em>Hedging</em> is when the costumer only closes one
+bet. This sort of action is known as <em>Speculating</em> since the
+costumer&#8217;s (colloquially called a <em>punter</em>) transactions are based on
+hints. For instance, a <em>punter</em> will easily close a back bet on a
+single event of a soccer game and wait until the end to see the
+outcome.</p>
+<p><em>Dutching</em> also has a special case called <em>Surebeting</em>. This happens
+when the events betted upon are collectively exhaustive (all the
+possible events).</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="47%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Number of Betted Events</th>
+<th class="head">Terminology</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Single</td>
+<td><em>Hedging</em> or <em>Speculating</em></td>
+</tr>
+<tr class="row-odd"><td>Multiple</td>
+<td><em>Dutching</em> or <em>Surebeting</em></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>The closing of bets can be further distinguished based on its
+timing, denoting two well known fashions: <em>Arbitrage</em> and <em>Trading</em>.</p>
+<p>In economics and finance, <em>Arbitrage</em> is the practice of taking
+advantage of a price difference between two or more markets:
+striking a combination of matching deals that capitalize upon the
+imbalance, the profit being the difference between the market prices.</p>
+<p>In the betting exchange context, it is possible to became an
+<em>Arbitrageur</em> when the implied probabilities (see
+<a class="reference internal" href="#decimaloddsandprobabilities"><em>Odds Decimais e Probabilidades</em></a>) of all possible events sum up to
+more than one. For instance, in a soccer match the odds available
+for backing <img class="math" src="_images/math/312512fd4020842041af62bf9005a2c656ff8afd.png" alt="\{\text{Home},\text{Visitor},\text{Draw}\}"/> are
+<img class="math" src="_images/math/e84217dec6a3fcb93b7504340c89076b78ba33fc.png" alt="O_{i} = \{1.3, 4.3, 2.3\}"/>, respectively. This results in a
+total <img class="math" src="_images/math/594b2e8af6381970468a7286c9a367f88ea7c9ff.png" alt="\sum_{i} \frac{1}{O_{i}} = 1.44"/> probability which now
+allows to take profit with a <em>Surebet</em>. <em>Arbitrageurs</em> are
+traditionally known to perform <em>surebets</em> on multiple bookmakers.
+The same situation can be performed, although highly unlikely,
+with hedging.</p>
+<p>A <em>Trader</em>, someone who performs <em>Trading</em>, takes an extra risk and
+closes his bets at different stages when the implied probabilities
+offered by the market turn out to be more favourable.</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="66%" />
+<col width="34%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Generation of Imbalance</th>
+<th class="head">Terminology</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Immediate</td>
+<td><em>Arbitrage</em></td>
+</tr>
+<tr class="row-odd"><td>Gradual</td>
+<td><em>Trading</em></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="the-back-lay-pair">
+<h2>O Par <em>A Favor</em>/<em>Contra</em><a class="headerlink" href="#the-back-lay-pair" title="Link permanente para este título">¶</a></h2>
+<p>The profit/loss of back and lay bets can be represented as random
+variables established by a stake and an implied probability in the
+following manner:</p>
+<div class="math">
+<p><img src="_images/math/f34a79f6dba1abdc3054b6e7002127a8ae630df3.png" alt="\begin{array}{r c l}
+    Back( p_{B}, s_{B} ) &amp; = &amp; \left\{
+    \begin{array}{l l}
+        s_{B} \times \frac{1-p_{B}}{p_{B}} &amp; \quad
+                                       \text{if the event occurs}\\
+        s_{B} \times (-1)                  &amp; \quad
+                                             \text{if it doesn't}\\
+    \end{array} \right. \\
+    Lay( p_{L}, s_{L} ) &amp; = &amp; \left\{
+    \begin{array}{l l}
+        s_{L} \times \frac{p_{L}-1}{p_{L}} &amp; \quad
+                                       \text{if the event occurs}\\
+        s_{L}                              &amp; \quad
+                                             \text{if it doesn't}\\
+    \end{array} \right.
+\end{array}"/></p>
+</div><p>where <img class="math" src="_images/math/3cb41ce632ad2a709640432c529b699d3a1d62ee.png" alt="p_{B}"/> and <img class="math" src="_images/math/70e9530c56eb6aea79d46abfc1da39e000611718.png" alt="p_{L}"/> are the implied probabilities
+of the bet, <img class="math" src="_images/math/034676e6999274a5bf140ba2a1933be44d3fe714.png" alt="s_{B}"/> and <img class="math" src="_images/math/2e8fe34ef7efc66ecb85b48c98cb8ce30a94ff36.png" alt="s_{L}"/> the stakes. The expected
+value and variance of each variable are calculated in
+<a class="reference internal" href="#expectedvariance"><em>Apêndice A &#8211; Valor Esperado e Variância</em></a>.</p>
+<p>Nowadays, in order to understand if it is possible to make profit
+with this pair of bets, the most common metric used is the
+<em>greenbook</em> which is defined has the situation of having positive
+profits in all markets (regardless to the distribution). Although
+this is an acceptable way of evaluating the established situation, a
+more generic metric will tell us if it is possible to make profit,
+which is not enough to satisfy a <em>greenbook</em>.</p>
+<div class="math">
+<p><img src="_images/math/2591288ef51d60a71e25a7208341e4c7e6f1d99b.png" alt="\text{Greenbook} \Rightarrow \text{Possibility of Proffit}
+
+\text{but}
+
+\text{Possibility of Proffit} \not \Rightarrow \text{Greenbook}"/></p>
+</div><p>The following matrix form is now presented where the two possible
+profits can be calculated with:</p>
+<div class="math" id="equation-eq:pesSystem">
+<p><span class="eqno">(2)</span><img src="_images/math/fd68071b911ed59ace345a869617e37ee23ad831.png" alt="P = E \times S \Leftrightarrow
+\begin{bmatrix}
+p\\
+\bar{p}
+\end{bmatrix} =
+\begin{bmatrix}
+    \frac{1-p_{B}}{p_{B}} &amp; \frac{p_{L}-1}{p_{L}}\\
+    -1 &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+    s_{B}\\
+    s_{L}
+\end{bmatrix}"/></p>
+</div><p>where <img class="math" src="_images/math/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" alt="P"/> is the <em>profit matrix</em>, <img class="math" src="_images/math/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png" alt="S"/> is the <em>stake
+matrix</em> and <img class="math" src="_images/math/fa2fa899f0afb05d6837885523503a2d4df434f9.png" alt="E"/> is the <em>exchange matrix</em> built from horizontal
+stack of its back and lay columns (<img class="math" src="_images/math/3dd4581e86bf6e33de8f9750b39299181f3d27eb.png" alt="E = \left[ B \mid L
+\right]"/>).</p>
+<p>With the exchange matrix is now possible to make an analysis about
+the value of its determinant:</p>
+<div class="math">
+<p><img src="_images/math/3e78d1739962e999a77a541e45f7b11d57b2e680.png" alt="det(E) = \frac{1-p_{B}}{p_{B}} + \frac{p_{L}-1}{p_{L}} =
+                             \frac{p_{L}-p_{B}}{p_{B} \times p_{L}}"/></p>
+</div><p>This value is only positive if <img class="math" src="_images/math/01078d0cf6d4524d7cd54e39f85a3d6862eb5439.png" alt="p_{L}-p_{B}&gt;0"/> which is in
+fact the main objective of a trader in single event operations (in
+order to make profit): contradict the nature of the market by
+closing a back bet with lower probability than a lay bet, which is
+the same to say a back odd higher than a lay odd.</p>
+<p>Unlike a <em>greenbook</em>, the determinant of the exchange matrix gives
+us a more general definition of when the customer will be able to
+make profit.</p>
+<div class="section" id="hedging">
+<h3>Hedging<a class="headerlink" href="#hedging" title="Link permanente para este título">¶</a></h3>
+<p>Let the following problem be enunciated:</p>
+<div class="topic" id="problem-1">
+<p class="topic-title first">Problem 1</p>
+<p>At a time <img class="math" src="_images/math/99fff7a91f103ac95c79c8090a288c2db54aeeae.png" alt="t_{0}"/> a trader made a lay bet of <img class="math" src="_images/math/e59e2c6e83eb78cca610a5fd4070ae01c8d4ae60.png" alt="100"/> €
+(<img class="math" src="_images/math/2e8fe34ef7efc66ecb85b48c98cb8ce30a94ff36.png" alt="s_{L}"/>) with a 3.15 odd (<img class="math" src="_images/math/e362f9d2fd11a3a5edacdc5f0bc63f6326322f81.png" alt="p_{L}=0.32"/>). After a
+while (<img class="math" src="_images/math/7e4ada16ca0a3922144810acc4248fdd2792bfd6.png" alt="t&gt;t_{0}"/>), the trader is able to make a back bet
+with a 5.6 odd (<img class="math" src="_images/math/71d9aeae0d3dca1a6661f3a1095f8600e4b208d3.png" alt="p_{B}=0.18"/>). How much should the stake
+<img class="math" src="_images/math/034676e6999274a5bf140ba2a1933be44d3fe714.png" alt="s_{B}"/> be?</p>
+</div>
+<p>A problem like this can appear when using the <em>Lay the Draw</em>
+strategy in the beginning of a soccer game. If a strong team plays
+against a weaker team (colloquially the <em>underdog</em>) than the
+probability that the draw at 0-0 will sustain throughout the game is
+naturally low. Obviously, there needs to exist an exit strategy
+(assume the prejudice) for the eventuality that no goal at all is
+scored. Another tragic eventuality that works against this strategy
+is when the <em>underdog</em> is the first to score.</p>
+<p>The approach described in this section aims to solve <a class="reference internal" href="#problem-1">Problem 1</a>
+while managing the distribution of profit/loss over all possible
+events in a dynamic way. <a class="reference internal" href="#problem-1">Problem 1</a> has only two possible profits
+that can relate by the following proportion:</p>
+<div class="math" id="equation-tradingeq">
+<span id="tradingeq"></span><p><span class="eqno">(3)</span><img src="_images/math/0a3eabd18a463b7964b5601f85283291b9f233dd.png" alt="\beta \times H\left( s_{L}-s_{B}\right) = H\left(
+     \frac{1-p_{B}}{p_{B}}s_{B} + \frac{p_{L}-1}{p_{L}}s_{L}\right)"/></p>
+</div><p>where <img class="math" src="_images/math/fdb63b9e51abe6bbb16acfb5d7b773ddbb5bf4a8.png" alt="\beta"/> is a coefficient that models the proportion
+between profits.</p>
+<p>In order to solve this equation, it is important to understand when
+the house commission is applied. In <a class="reference internal" href="#alphaone"><em>Apêndice B &#8211; Simplificação da Comissão A Favor/Contra</em></a>, a
+demonstration is made proving this equation can be solved has if no
+commission exists. This makes it possible to define the following
+generic relation:</p>
+<div class="topic">
+<p class="topic-title first">Back-Lay Proportion Rule</p>
+<p>In order to achieve a proportion <img class="math" src="_images/math/fdb63b9e51abe6bbb16acfb5d7b773ddbb5bf4a8.png" alt="\beta"/> between the
+returns of a back-lay pair of bets, the proportion between
+stakes must be the following:</p>
+<div class="math" id="equation-genericTradingRelation">
+<span id="generictradingrelation"></span><p><span class="eqno">(4)</span><img src="_images/math/2e739d2afcae38f20e3c705791f8c0cd01606b60.png" alt="s_{B} \times \frac{1+p_{B}(\beta -1)}{p_{B}} = s_{L} \times
+                                \frac{1+p_{L}(\beta -1)}{p_{L}}"/></p>
+</div><p>where <img class="math" src="_images/math/3cb41ce632ad2a709640432c529b699d3a1d62ee.png" alt="p_{B}"/> and <img class="math" src="_images/math/70e9530c56eb6aea79d46abfc1da39e000611718.png" alt="p_{L}"/> are the implied
+probabilities of the bets, <img class="math" src="_images/math/034676e6999274a5bf140ba2a1933be44d3fe714.png" alt="s_{B}"/> and <img class="math" src="_images/math/2e8fe34ef7efc66ecb85b48c98cb8ce30a94ff36.png" alt="s_{L}"/> the
+stakes.</p>
+</div>
+<p>With this rule, it is now possible to manage the returns with the
+following five conditions.</p>
+<div class="section" id="id4">
+<h4>1. <img class="math" src="_images/math/f6faa56a9a976fb212a77ff6c6e833716b10c496.png" alt="H(\bar{p})=0"/><a class="headerlink" href="#id4" title="Link permanente para este título">¶</a></h4>
+<p>The first condition is the easiest one. For this to happen one needs
+to solve <img class="math" src="_images/math/3e789c24445b66a8c63922aeb31cd970eec196db.png" alt="s_{L}-s_{B}=0"/> making the second stake equal to the
+first. In problem <a class="reference internal" href="#problem-1">Problem 1</a> the second stake would be
+<img class="math" src="_images/math/27a92e3eaa0d0881531906e3522a5ef3561935ed.png" alt="s_{B}=s_{L}=100"/> €.</p>
+</div>
+<div class="section" id="id5">
+<h4>2. <img class="math" src="_images/math/46fc45bbebd1c5897d73516f8345a66a543c4c38.png" alt="H(p)=0"/><a class="headerlink" href="#id5" title="Link permanente para este título">¶</a></h4>
+<p>Second condition can be achieved by solving
+<img class="math" src="_images/math/70def503532dfa1bba891b53bc5d4b152cf48ab8.png" alt="s_{B}\times\frac{1-p_{B}}{p_{B}}=s_{L}\times\frac{1-p_{L}}{p_{L
+}}"/> which is equivalent to have <img class="math" src="_images/math/632a65c82b0d143ac0630269ba8720846fc4c846.png" alt="\beta=0"/>. In <a class="reference internal" href="#problem-1">Problem 1</a>
+the second stake would be <img class="math" src="_images/math/7c3d70f04ec4ef05c74b2e0431e39d1f30c647f8.png" alt="s_{B}=46.74"/> €.</p>
+</div>
+<div class="section" id="id6">
+<h4>3. <img class="math" src="_images/math/7148f0bf37793844cbf06658607af6e33ec1bece.png" alt="H(p)=H(\bar{p})"/><a class="headerlink" href="#id6" title="Link permanente para este título">¶</a></h4>
+<p>The third approach is solved making <img class="math" src="_images/math/bd0841c3936bc875fefe9192ca5209033f156466.png" alt="\beta=1"/> in equation
+<a class="reference internal" href="#generictradingrelation">genericTradingRelation</a>. The last needed stake can be calculated
+with:</p>
+<div class="math">
+<p><img src="_images/math/8e7adb372fb8c149aefcdf7dadaf997542e802c6.png" alt="\frac{s_{L}}{p_{L}}=\frac{s_{B}}{p_{B}}"/></p>
+</div><p>which would give <img class="math" src="_images/math/35eb1ede7eaa6921266c3a1a7eb9301a55bcae10.png" alt="s_{B}=56.25"/> € with a profit of 41.56 € in
+every market.</p>
+</div>
+<div class="section" id="id7">
+<h4>4. <img class="math" src="_images/math/0d1c1070a9b5e8fa603e2e9dc9251a3eee89411b.png" alt="\frac{H(p)}{P}=\frac{H(\bar{p})}{1-P}"/><a class="headerlink" href="#id7" title="Link permanente para este título">¶</a></h4>
+<p><img class="math" src="_images/math/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" alt="P"/> is the trader&#8217;s expected probability.</p>
+<p>In the fourth, we make <img class="math" src="_images/math/46eeac970f70a4478311b9f7b75c067a37a424a3.png" alt="\beta=\frac{P}{1-P}"/>. This relation
+makes the expected profit the same in any possible situation. The
+difficulty here, is to set the value of <img class="math" src="_images/math/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" alt="P"/>. A simple solution
+is to use the implicit probability that the market has established
+for the event at that moment: in problem <a class="reference internal" href="#problem-1">Problem 1</a>, the odd 5.6
+means an implied probability of <img class="math" src="_images/math/f7804b11bf3d05158a30dee45174f09104504cc4.png" alt="P = 0.18"/>. which gives
+<img class="math" src="_images/math/1a65b147a8ef4caa122ae41418c1b785f31d6112.png" alt="s_{B}=49.16"/> € with <img class="math" src="_images/math/2b513eb53166d68cab2b538c011eb0ddeeeeeed8.png" alt="H(p)=10.6"/> € and
+<img class="math" src="_images/math/6b562c8f67e81e8033b434aff36de5e696119f5f.png" alt="H(\bar{p})=48.29"/> €.</p>
+</div>
+<div class="section" id="id8">
+<h4>5. <img class="math" src="_images/math/bc9d5f471131c316ea89f8f71f388bd48eb69093.png" alt="\frac{H(p)}{(1+\delta)}=\frac{H(\bar{p})}{(1-\delta)}"/><a class="headerlink" href="#id8" title="Link permanente para este título">¶</a></h4>
+<p><img class="math" src="_images/math/23fec4fbc4794268ef9eaec3742e1fd278763825.png" alt="\beta=\frac{1+\delta}{1-\delta}"/> where <img class="math" src="_images/math/0a42a8b725c200085e5253db2d2fbf8dab898a8f.png" alt="\delta"/> is a
+bias operator provided in the following manner:</p>
+<div class="math">
+<p><img src="_images/math/4a94e387ab487ae0018e8fee9aec26070455d096.png" alt="\left\{
+\begin{array}{l}
+    \gamma (1+\delta ) = H(p)\\
+    \gamma (1-\delta ) = H(\bar{p})\\
+\end{array} \right."/></p>
+</div><p>where <img class="math" src="_images/math/66981fa3920210c6ad8dbe5e968783d5dd7520c3.png" alt="\gamma"/> is an unknown central profit.</p>
+<p>An expected, and obvious, result is that when <img class="math" src="_images/math/6ebe75eb86e8fb54906f3523d9486a05cc5d2f28.png" alt="\delta
+\rightarrow 0"/> this relation becomes the same as if <img class="math" src="_images/math/ed74e1fe1af469dda3514568dd916dfe462d2575.png" alt="\beta = 1"/>.</p>
+<img alt="_images/biastrade.png" class="align-center" src="_images/biastrade.png" style="height: 500px;" />
+</div>
+</div>
+</div>
+<div class="section" id="references">
+<h2>Referências<a class="headerlink" href="#references" title="Link permanente para este título">¶</a></h2>
+<table class="docutils footnote" frame="void" id="id9" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="http://www.betfair.com/">http://www.betfair.com/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Mark Davies, Leyland Pitt, Daniel Shapiro, and Richard
+Watson. Betfair.com: Five technology forces revolutionize worldwide
+wagering. European Management Journal, 23:533–541, 2005.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id11" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td>Des Laffey. Entrepreneurship and innovation in the uk betting
+industry: The rise of person-to-person betting. European Management
+Journal, 23:351–359, 2005.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="appendix-a-expected-value-and-variance">
+<span id="expectedvariance"></span><h2>Apêndice A &#8211; Valor Esperado e Variância<a class="headerlink" href="#appendix-a-expected-value-and-variance" title="Link permanente para este título">¶</a></h2>
+<p>First we need to suppose a value to the real probability that the
+event will happen, <img class="math" src="_images/math/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" alt="P"/>. Normally a simple solution is to use
+the implied probability that the market has established for the
+event at that moment. More complex approaches can be made with the
+retrieval of probabilistic information from external sources to the
+exchange or with the estimation of a trend of the market.</p>
+<p>The expected value of a bet is normally called <em>the value of the
+bet</em>. This term is unfortunate since it is easily confused with the
+stake of the bet in languages other than English.</p>
+<div class="section" id="back">
+<h3>A Favor<a class="headerlink" href="#back" title="Link permanente para este título">¶</a></h3>
+<p>The expected value of a back bet with real probability <img class="math" src="_images/math/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" alt="P"/> is:</p>
+<div class="math">
+<p><img src="_images/math/ab6646fbb2281bbe0cbd71283465ec4e728fbddf.png" alt="E \left[ Back(p_{B},s_{B}) \right] = \mu_{B} = P \times s_{B} \frac{1-p_{B}}{p_{B}} - (1-P) \times (s_{B}) = s_{B} \left( \frac{P}{p_{B}}-1 \right)"/></p>
+</div><p>The variance is:</p>
+<div class="math">
+<p><img src="_images/math/3333044172e872f98e57120b8d1ff31a9ccd41ac.png" alt="Var \left[ Back(p_{B},s_{B}) \right] = P \left( s_{B}\frac{1-p_{B}}{p_{B}} - \mu_{B} \right)^{2} + (1-P) \left( - s_{B} - \mu_{B} \right)^{2}"/></p>
+</div></div>
+<div class="section" id="lay">
+<h3>Contra<a class="headerlink" href="#lay" title="Link permanente para este título">¶</a></h3>
+<p>The expected value of a lay bet with probability <img class="math" src="_images/math/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png" alt="P"/> is:</p>
+<div class="math">
+<p><img src="_images/math/b2cb2095bec2e186eddc0e898de2271bd67267cc.png" alt="E \left[ Lay(p_{L},s_{L}) \right] = \mu_{L} = P \times s_{L} \frac{p_{L}-1}{p_{L}} + (1-P) \times (s_{L}) = s_{L} \left( 1 - \frac{P}{p_{L}} \right)"/></p>
+</div><p>The variance is:</p>
+<div class="math">
+<p><img src="_images/math/7d83c0e7277e64e144308661d5834b798787d56e.png" alt="Var \left[ Lay(p_{L},s_{L}) \right] = P \left( s_{L}\frac{p_{L}-1}{p_{L}} - \mu_{L} \right)^{2} + (1-P) \left( s_{L} - \mu_{L} \right)^{2}"/></p>
+</div></div>
+</div>
+<div class="section" id="appendix-b-back-lay-commission-simplification">
+<span id="alphaone"></span><h2>Apêndice B &#8211; Simplificação da Comissão <em>A Favor</em>/<em>Contra</em><a class="headerlink" href="#appendix-b-back-lay-commission-simplification" title="Link permanente para este título">¶</a></h2>
+<p>Observing the behaviour of <img class="math" src="_images/math/b1902d279ba37d60bdce4e0e987b7cd19d48974e.png" alt="H"/> in equation <a class="reference internal" href="#tradingeq">tradingeq</a>, the
+following conditions are easily noted:</p>
+<div class="math">
+<p><img src="_images/math/e49d3330b185315f01d2bcdd945f1ffda512ea57.png" alt="\left\{
+\begin{array}{l}
+    C_{1}: s_{L} &gt; s_{B}\\
+    C_{2}: \frac{1-p_{B}}{p_{B}}s_{B} &gt; \frac{1-p_{L}}{p_{L}}s_{L} \\
+\end{array} \right."/></p>
+</div><p>Equation <a class="reference internal" href="#tradingeq">tradingeq</a> can now be rewritten in the following way:</p>
+<div class="math" id="equation-alphaBetaTrading">
+<span id="alphabetatrading"></span><p><span class="eqno">(5)</span><img src="_images/math/c1e3dd6c266ece6f49464ad6e634c064fa1c9e90.png" alt="\alpha \times \beta \times\left( s_{L}-s_{B}\right) = \frac{1-p_{B}}{p_{B}}s_{B} + \frac{p_{L}-1}{p_{L}}s_{L}"/></p>
+</div><p>where <img class="math" src="_images/math/10f32377ac67d94f764f12a15ea987e88c85d3e1.png" alt="\alpha"/> is</p>
+<div class="math">
+<p><img src="_images/math/ae8633c61e784c8bd339fd01516268473a157726.png" alt="\left\{
+\begin{array}{c l}
+    (1-h)         &amp; \quad \text{if } C_{1} \wedge \bar{C_{2}}\\
+    \frac{1}{1-h} &amp; \quad \text{if }\bar{C_{1}} \wedge C_{2} \\
+    1             &amp; \quad \text{if }( C_{1} \wedge C_{2} ) \vee ( \bar{C_{1}} \wedge \bar{C_{2}} )\\
+\end{array} \right."/></p>
+</div><p>The problem now is that <img class="math" src="_images/math/010dd7e68eb27f1ce5b462841ea650bffe2169f8.png" alt="C_{1}"/> and <img class="math" src="_images/math/8469fb9e58c21494d012cf7973ed8870b8db3de6.png" alt="C_{2}"/> depend on
+the values of the stakes, which are the values we are trying to
+model. This said, both conditions will be solved in order to the
+implicit probabilities. Equation <a class="reference internal" href="#alphabetatrading">alphaBetaTrading</a> can be
+simplified to the following form:</p>
+<div class="math">
+<p><img src="_images/math/480e8f8a867a6e37d4676d72da122d207c89bc70.png" alt="s_{L} \times \left( \alpha \beta + \frac{1-p_{L}}{p_{L}} \right) = s_{B} \times \left( \alpha \beta + \frac{1-p_{B}}{p_{B}} \right) \Leftrightarrow
+s_{L} = s_{B} \frac{ \alpha \beta + \frac{1-p_{B}}{p_{B}} }{ \alpha \beta + \frac{1-p_{L}}{p_{L}} }"/></p>
+</div><p>The first condition becomes:</p>
+<div class="math">
+<p><img src="_images/math/3b00ff4191e2bf22e579985671a6a24459590b30.png" alt="s_{L} &gt; s_{B} \Leftrightarrow
+s_{B} \frac{ \alpha \beta + \frac{1-p_{B}}{p_{B}} }{ \alpha \beta + \frac{1-p_{L}}{p_{L}} } &gt; s_{B} \Leftrightarrow
+\alpha \beta + \frac{1-p_{B}}{p_{B}}  &gt; \alpha \beta + \frac{1-p_{L}}{p_{L}} \Leftrightarrow
+p_{L} &gt; p_{B}"/></p>
+</div><p>And the second:</p>
+<div class="math">
+<p><img src="_images/math/899d2f456fdba8e4d72bbd47a332c31dd3557662.png" alt="\frac{1-p_{B}}{p_{B}}s_{B} &gt; \frac{1-p_{L}}{p_{L}}s_{L} \Leftrightarrow
+\frac{1-p_{B}}{p_{B}} \left( \alpha \beta + \frac{1-p_{L}}{p_{L}} \right) &gt; \frac{1-p_{L}}{p_{L}} \left( \alpha \beta + \frac{1-p_{B}}{p_{B}} \right)  \Leftrightarrow"/></p>
+</div><div class="math">
+<p><img src="_images/math/fe35925ecf84dd0f3882ef173ba581ecbd178b35.png" alt="\Leftrightarrow \alpha \beta \times \frac{1-p_{B}}{p_{B}} &gt; \alpha \beta \times \frac{1-p_{L}}{p_{L}} \Leftrightarrow
+p_{L} &gt; p_{B}"/></p>
+</div><p>Concluding that <img class="math" src="_images/math/1a61c40ff17d99e0a845f75b0434b3be33b7bda7.png" alt="C_{1} \Leftrightarrow C_{2}"/> which tells us
+that <img class="math" src="_images/math/5d739b3faa1ca596d500cae6ad311fd86a8b6937.png" alt="\alpha=1"/>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navegação</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="tutorial.html" title="Como Utilizar a Calculadora"
+             >anterior</a></li>
+        <li><a href="index.html">Calculadora de Trading</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Filipe Funenga.
+    </div>
+  </body>
+</html>

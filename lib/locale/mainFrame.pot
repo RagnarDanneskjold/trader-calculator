@@ -1,0 +1,114 @@
+msgid ""
+"Trader Calculator is an eficient tool for the \n"
+"betting exchange users. \n"
+"\n"
+"Features include optimized keyboard \n"
+"navigation, updated results on every \n"
+"keypress, setting of bias between back/lay \n"
+"profits and more."
+msgstr ""
+
+msgid "Trader Calculator"
+msgstr ""
+
+msgid "Back Odd"
+msgstr ""
+
+msgid "Back Stake"
+msgstr ""
+
+msgid "Lay Odd"
+msgstr ""
+
+msgid "Lay Stake"
+msgstr ""
+
+msgid "Menubar"
+msgstr ""
+
+msgid "Calculator"
+msgstr ""
+
+msgid "Preferences\tAlt+Enter"
+msgstr ""
+
+msgid "Quit\tCtrl+Q"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Clear Textbox\tSpace"
+msgstr ""
+
+msgid "Clear All Values\tCtrl+K"
+msgstr ""
+
+msgid "Set as Unknown\tCtrl+U"
+msgstr ""
+
+msgid "Help"
+msgstr ""
+
+msgid "Documentation\tF1"
+msgstr ""
+
+msgid "About"
+msgstr ""
+
+msgid "Odd"
+msgstr ""
+
+msgid "Stake"
+msgstr ""
+
+msgid "Profits"
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Lay"
+msgstr ""
+
+msgid "Commission"
+msgstr ""
+
+msgid "Bias"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Verbosisty Level"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Ok"
+msgstr ""
+
+msgid "Preferences"
+msgstr ""
+
+msgid "Configure the application preferences"
+msgstr ""
+
+msgid "Exits the application"
+msgstr ""
+
+msgid "Clears focused textbox"
+msgstr ""
+
+msgid "Clears odds and stakes"
+msgstr ""
+
+msgid "Set textbox as unknown"
+msgstr ""
+
+msgid "Shows the documentation"
+msgstr ""
+
+msgid "Shows credits and license"
+msgstr ""

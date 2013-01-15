@@ -1,0 +1,6 @@
+This folder aims to simplify deployment by saving configurations files and other required files.
+
+WARNING:
+    Do NOT include distributions on git history. That sort of files 
+    should be uploaded to hosting service (something like dropbox or 
+    box will is ok).

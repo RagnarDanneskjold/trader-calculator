@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxFrame" name="mainFrame">
+		<style>wxDEFAULT_FRAME_STYLE</style>
+		<size>300,250</size>
+		<title>Trader Calculator</title>
+		<object class="wxMenuBar" name="menubar">
+			<label>Menubar</label>
+			<object class="wxMenu" name="menuCalculator">
+				<label>Calculator</label>
+				<object class="wxMenuItem" name="menuPreferences">
+					<label>Preferences\tAlt+Enter</label>
+					<help>Configure the application preferences</help>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="menuQuit">
+					<label>Quit\tCtrl+Q</label>
+					<help>Exits the application</help>
+				</object>
+			</object>
+			<object class="wxMenu" name="menuEdit">
+				<label>Edit</label>
+				<object class="wxMenuItem" name="menuClearTextbox">
+					<label>Clear Textbox\tSpace</label>
+					<help>Clears focused textbox</help>
+				</object>
+				<object class="wxMenuItem" name="menuClearValues">
+					<label>Clear All Values\tCtrl+K</label>
+					<help>Clears odds and stakes</help>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="menuSetUnknown">
+					<label>Set as Unknown\tCtrl+U</label>
+					<help>Set textbox as unknown</help>
+				</object>
+			</object>
+			<object class="wxMenu" name="menuHelp">
+				<label>Help</label>
+				<object class="wxMenuItem" name="menuDocumentation">
+					<label>Documentation\tF1</label>
+					<help>Shows the documentation</help>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="menuAbout">
+					<label>About</label>
+					<help>Shows credits and license</help>
+				</object>
+			</object>
+		</object>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL</flag>
+				<border>5</border>
+				<object class="wxPanel" name="rootPanel">
+					<object class="wxBoxSizer">
+						<orient>wxVERTICAL</orient>
+						<object class="spacer">
+							<option>1</option>
+							<flag>wxALIGN_CENTER_HORIZONTAL</flag>
+							<border>5</border>
+							<size>0,0</size>
+						</object>
+						<object class="sizeritem">
+							<option>0</option>
+							<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+							<border>15</border>
+							<object class="wxBoxSizer">
+								<orient>wxVERTICAL</orient>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALIGN_CENTER_HORIZONTAL</flag>
+									<border>5</border>
+									<object class="wxFlexGridSizer">
+										<rows>3</rows>
+										<cols>4</cols>
+										<vgap>0</vgap>
+										<hgap>0</hgap>
+										<growablecols></growablecols>
+										<growablerows></growablerows>
+										<object class="spacer">
+											<option>0</option>
+											<flag>wxALIGN_CENTER_VERTICAL|wxALIGN_CENTER_HORIZONTAL</flag>
+											<border>5</border>
+											<size>0,0</size>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_BOTTOM|wxBOTTOM</flag>
+											<border>5</border>
+											<object class="wxStaticText" name="odd">
+												<label>Odd</label>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_BOTTOM|wxBOTTOM</flag>
+											<border>5</border>
+											<object class="wxStaticText" name="stake">
+												<label>Stake</label>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALIGN_BOTTOM|wxALIGN_CENTER_HORIZONTAL|wxBOTTOM</flag>
+											<border>5</border>
+											<object class="wxStaticText" name="profit">
+												<label>Profits</label>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxALIGN_RIGHT</flag>
+											<border>5</border>
+											<object class="wxStaticText" name="back">
+												<label>Back</label>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											<border>5</border>
+											<object class="wxTextCtrl" name="bo">
+												<style>wxTE_CENTRE|wxWANTS_CHARS</style>
+												<size>70,-1</size>
+												<value></value>
+												<maxlength>0</maxlength>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											<border>5</border>
+											<object class="wxTextCtrl" name="bs">
+												<style>wxTE_CENTRE|wxWANTS_CHARS</style>
+												<size>70,-1</size>
+												<value></value>
+												<maxlength>0</maxlength>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											<border>5</border>
+											<object class="wxTextCtrl" name="bp">
+												<style>wxTE_CENTRE</style>
+												<size>70,-1</size>
+												<value></value>
+												<maxlength>0</maxlength>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALIGN_CENTER_VERTICAL|wxRIGHT|wxALIGN_RIGHT</flag>
+											<border>5</border>
+											<object class="wxStaticText" name="lay">
+												<label>Lay</label>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											<border>5</border>
+											<object class="wxTextCtrl" name="lo">
+												<style>wxTE_CENTRE|wxWANTS_CHARS</style>
+												<size>70,-1</size>
+												<value></value>
+												<maxlength>0</maxlength>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+											<border>5</border>
+											<object class="wxTextCtrl" name="ls">
+												<style>wxTE_CENTRE|wxWANTS_CHARS</style>
+												<size>70,-1</size>
+												<value></value>
+												<maxlength>0</maxlength>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>1</option>
+											<flag>wxALIGN_CENTER_VERTICAL|wxALIGN_CENTER_HORIZONTAL</flag>
+											<border>5</border>
+											<object class="wxTextCtrl" name="lp">
+												<style>wxTE_CENTRE</style>
+												<size>70,-1</size>
+												<value></value>
+												<maxlength>0</maxlength>
+											</object>
+										</object>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>1</option>
+									<flag>wxTOP|wxBOTTOM|wxEXPAND|wxALIGN_CENTER_HORIZONTAL</flag>
+									<border>10</border>
+									<object class="wxStaticLine" name="line">
+										<style>wxLI_HORIZONTAL</style>
+									</object>
+								</object>
+								<object class="sizeritem">
+									<option>0</option>
+									<flag>wxALIGN_CENTER_HORIZONTAL</flag>
+									<border>5</border>
+									<object class="wxFlexGridSizer">
+										<rows>2</rows>
+										<cols>2</cols>
+										<vgap>0</vgap>
+										<hgap>0</hgap>
+										<growablecols></growablecols>
+										<growablerows></growablerows>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALIGN_CENTER_VERTICAL|wxALIGN_RIGHT|wxRIGHT</flag>
+											<border>5</border>
+											<object class="wxStaticText" name="commissionLabel">
+												<label>Commission</label>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxEXPAND</flag>
+											<border>5</border>
+											<object class="wxTextCtrl" name="commission">
+												<style>wxTE_CENTRE|wxWANTS_CHARS</style>
+												<size>50,-1</size>
+												<value></value>
+												<maxlength>0</maxlength>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+											<border>5</border>
+											<object class="wxStaticText" name="biasLabel">
+												<label>Bias</label>
+											</object>
+										</object>
+										<object class="sizeritem">
+											<option>0</option>
+											<flag>wxEXPAND|wxALIGN_CENTER_VERTICAL|wxALIGN_CENTER_HORIZONTAL</flag>
+											<border>5</border>
+											<object class="wxTextCtrl" name="bias">
+												<style>wxTE_CENTRE|wxWANTS_CHARS</style>
+												<size>50,-1</size>
+												<value></value>
+												<maxlength>0</maxlength>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+						<object class="spacer">
+							<option>1</option>
+							<flag>wxALIGN_CENTER_HORIZONTAL</flag>
+							<border>5</border>
+							<size>0,0</size>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="statusbar">
+			<style>wxST_SIZEGRIP</style>
+			<fields>1</fields>
+		</object>
+	</object>
+	<object class="wxDialog" name="preferencesDialog">
+		<style>wxDEFAULT_DIALOG_STYLE</style>
+		<title>Preferences</title>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="spacer">
+				<option>1</option>
+				<flag>wxALIGN_CENTER_HORIZONTAL</flag>
+				<border>5</border>
+				<size>0,0</size>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+				<border>15</border>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL</flag>
+						<border>5</border>
+						<object class="wxGridSizer">
+							<rows>2</rows>
+							<cols>2</cols>
+							<vgap>1</vgap>
+							<hgap>0</hgap>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="langLabel">
+									<style>wxALIGN_RIGHT</style>
+									<label>Language</label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER_VERTICAL|wxALIGN_CENTER_HORIZONTAL|wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxChoice" name="language">
+									<style>wxTAB_TRAVERSAL</style>
+									<selection>0</selection>
+									<content />
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="verboseLabel">
+									<style>wxALIGN_RIGHT</style>
+									<label>Verbosisty Level</label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxChoice" name="verbose">
+									<style>wxTAB_TRAVERSAL</style>
+									<selection>0</selection>
+									<content>
+										<item>Warning</item>
+										<item>Info</item>
+										<item>Debug</item>
+									</content>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxTOP|wxBOTTOM</flag>
+						<border>10</border>
+						<object class="wxStaticLine" name="line1">
+							<style>wxLI_HORIZONTAL</style>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER_HORIZONTAL</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxHORIZONTAL</orient>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<object class="wxButton" name="cancel">
+									<style>wxTAB_TRAVERSAL</style>
+									<label>Cancel</label>
+									<default>0</default>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<object class="wxButton" name="ok">
+									<style>wxTAB_TRAVERSAL</style>
+									<label>Ok</label>
+									<default>0</default>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="spacer">
+				<option>1</option>
+				<flag>wxALIGN_CENTER_HORIZONTAL</flag>
+				<border>5</border>
+				<size>0,0</size>
+			</object>
+		</object>
+	</object>
+</resource>

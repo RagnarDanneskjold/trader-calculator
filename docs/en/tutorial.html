@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>How to Use the Calculator &mdash; Trader Calculator 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/solar.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/icon.ico"/>
+    <link rel="top" title="Trader Calculator 0.1 documentation" href="index.html" />
+    <link rel="next" title="Introduction to the Betting Exchange" href="theory.html" />
+    <link rel="prev" title="Trader Calculator" href="index.html" /><link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+<link href="_static/solarized-dark.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="theory.html" title="Introduction to the Betting Exchange"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="index.html" title="Trader Calculator"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Trader Calculator</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">How to Use the Calculator</a><ul>
+<li><a class="reference internal" href="#navigation">Navigation</a></li>
+<li><a class="reference internal" href="#inserting-values">Inserting Values</a></li>
+<li><a class="reference internal" href="#clearing-the-text-boxes">Clearing the Text boxes</a></li>
+<li><a class="reference internal" href="#getting-results">Getting Results</a></li>
+<li><a class="reference internal" href="#introducing-bias">Introducing Bias</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Trader Calculator</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="theory.html"
+                        title="next chapter">Introduction to the Betting Exchange</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/tutorial.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="how-to-use-the-calculator">
+<h1>How to Use the Calculator<a class="headerlink" href="#how-to-use-the-calculator" title="Permalink to this headline">¶</a></h1>
+<p>The calculator has a total of six editable text boxes, where four
+can be used to input values (odds and stakes) and the other two to
+insert parameters (commission and bias).</p>
+<p>The keyboard configuration implemented (see <a class="reference internal" href="#navigation"><em>Navigation</em></a> and
+<a class="reference internal" href="#clearing"><em>Clearing the Text boxes</em></a>), allows the user to efficiently insert values with
+a <em>desktop keyboard</em> by placing his two hands in the following way:
+the left hand can be placed on the left side with the index finger
+on the <em>TAB</em> key and the thumb alternating between the <em>SPACE</em> and
+<em>SHIFT</em> keys; the right hand can be used to press the numeric pad
+and arrows.</p>
+<img alt="_images/sixboxes-win7-pt.png" class="align-center" src="_images/sixboxes-win7-pt.png" style="height: 234px;" />
+<div class="section" id="navigation">
+<span id="id1"></span><h2>Navigation<a class="headerlink" href="#navigation" title="Permalink to this headline">¶</a></h2>
+<p>Navigation between text boxes is made with the <em>TAB</em> and <em>ENTER</em>
+keys. <em>SHIFT</em> reverses the orientation.</p>
+<p>The order of the text boxes was defined based on the following
+assumption: when a trader is observing a market, he is first focused on
+the odds, and posteriorly on the stakes.</p>
+<img alt="_images/navforward-ubuntu-pt.png" class="align-center" src="_images/navforward-ubuntu-pt.png" />
+<p>In order to navigate in the opposite direction, just hold the
+<em>SHIFT</em> key while pressing <em>TAB</em> or <em>ENTER</em>.</p>
+</div>
+<div class="section" id="inserting-values">
+<h2>Inserting Values<a class="headerlink" href="#inserting-values" title="Permalink to this headline">¶</a></h2>
+<p>Values can be inserted like a Python <a class="footnote-reference" href="#id4" id="id2">[1]</a> float represented in a
+string that will be parsed by the built-in function float <a class="footnote-reference" href="#id5" id="id3">[2]</a>:</p>
+<blockquote>
+<div><ul class="simple">
+<li>&#8221;.03&#8221;</li>
+<li>&#8220;2.4&#8221;</li>
+<li>&#8220;-2&#8221;</li>
+</ul>
+</div></blockquote>
+<p>If there is any error with the input, the calculator is robust
+enough and will change the background colour to red and cancel the
+output of results.</p>
+<img alt="_images/robust-ubuntu-en.png" class="align-center" src="_images/robust-ubuntu-en.png" />
+<p>The insertion of values can be further improved by using the arrow
+keys <em>UP</em> and <em>DOWN</em> to add/subtract 0.01 to the current value.</p>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[1]</a></td><td><a class="reference external" href="http://python.org">http://python.org</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id5" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[2]</a></td><td><a class="reference external" href="http://docs.python.org/2/library/functions.html#float">http://docs.python.org/2/library/functions.html#float</a></td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="clearing-the-text-boxes">
+<span id="clearing"></span><h2>Clearing the Text boxes<a class="headerlink" href="#clearing-the-text-boxes" title="Permalink to this headline">¶</a></h2>
+<p>In case of mistake, or any other reason, the value in the text box
+can be corrected by either using the <em>BACKSPACE</em> key with the arrows
+<em>LEFT</em> and <em>RIGHT</em> or by erasing the entire value with the <em>SPACE</em>
+key.</p>
+<p>In most cases, the last approach is preferred since the user will be
+using two hands: the left hand to press <em>SPACE</em> and the right hand
+in the numeric pad to introduce the new value.</p>
+<p>In case of apocalypse, or just because the context has changed, the
+user can always rely on <em>CTRL+K</em> to return to the beginning by
+cleaning all the text boxes.</p>
+</div>
+<div class="section" id="getting-results">
+<h2>Getting Results<a class="headerlink" href="#getting-results" title="Permalink to this headline">¶</a></h2>
+<p>The application tries to automatically calculate the needed results
+every time a new character is introduced in any of the editable text
+boxes.</p>
+<img alt="_images/calculation-ubuntu-en.png" class="align-center" src="_images/calculation-ubuntu-en.png" />
+<p>Its important to notice that once the user fills three text boxes,
+he is implicitly indicating that he wants to find value of the
+fourth text box. This means that the last box is the <em>unknown</em>
+variable and that it is no longer editable.</p>
+<p>In order to change the <em>unknown</em> variable the <em>CTRL+U</em> keys can be
+pressed when the wanted variable is focused. Another way to change
+the <em>unknown</em> variable is by <em>resetting</em> the calculator (see
+<a class="reference internal" href="#clearing"><em>Clearing the Text boxes</em></a>).</p>
+<img alt="_images/setUnknown-ubuntu-en.png" class="align-center" src="_images/setUnknown-ubuntu-en.png" />
+</div>
+<div class="section" id="introducing-bias">
+<h2>Introducing Bias<a class="headerlink" href="#introducing-bias" title="Permalink to this headline">¶</a></h2>
+<p>Bias between the profits can be setted in the interval [-1, 1].</p>
+<img alt="_images/bias-ubuntu-en.png" class="align-center" src="_images/bias-ubuntu-en.png" />
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="theory.html" title="Introduction to the Betting Exchange"
+             >next</a></li>
+        <li class="right" >
+          <a href="index.html" title="Trader Calculator"
+             >previous</a> |</li>
+        <li><a href="index.html">Trader Calculator</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Filipe Funenga.
+    </div>
+  </body>
+</html>

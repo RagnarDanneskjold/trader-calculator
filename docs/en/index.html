@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Trader Calculator &mdash; Trader Calculator 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/solar.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/icon.ico"/>
+    <link rel="top" title="Trader Calculator 0.1 documentation" href="#" />
+    <link rel="next" title="How to Use the Calculator" href="tutorial.html" /><link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+<link href="_static/solarized-dark.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="tutorial.html" title="How to Use the Calculator"
+             accesskey="N">next</a></li>
+        <li><a href="#">Trader Calculator</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Trader Calculator</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#documentation">Documentation</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#development">Development</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tutorial.html"
+                        title="next chapter">How to Use the Calculator</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="trader-calculator">
+<h1>Trader Calculator<a class="headerlink" href="#trader-calculator" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><ul class="simple">
+<li><em>Documentation also available in:</em> <a class="reference external" href="../pt/index.html">Português</a>
+<img alt="portugal" src="_images/pt.png" /></li>
+<li><em>Download the latest version for your platform at</em> <a class="reference external" href="https://github.com/ffunenga/traderCalculator/tree/master/deploy/dist">github</a></li>
+</ul>
+</div></blockquote>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This application is a simple tool for users of betting exchanges and
+it is meant to solve the well-known problem of <em>Bet-Hedging</em>:
+configure the profit/losses of two bets - a back and a lay bet - for
+all outcomes.</p>
+<img alt="_images/bias-ubuntu-en.png" class="align-center" src="_images/bias-ubuntu-en.png" />
+<p>The main objective in its development was to guarantee the
+possibility of using solely the keyboard fast and efficiently.
+Obviously, their exists other solutions of the same kind <a class="footnote-reference" href="#id5" id="id1">[1]</a> <a class="footnote-reference" href="#id6" id="id2">[2]</a>
+<a class="footnote-reference" href="#id7" id="id3">[3]</a> but all have problems: they depend on the web-browser, none
+allows keyboard devotion, amongst others.</p>
+<p>This calculator is an open-source project (GPLv2) and
+cross-platform. It is implemented as free software aiming to be
+executed in all platforms supported by wxPython <a class="footnote-reference" href="#id8" id="id4">[4]</a>.</p>
+<table class="docutils footnote" frame="void" id="id5" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="http://www.arbcruncher.com/">http://www.arbcruncher.com/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td><a class="reference external" href="http://www.betcalc.com/backlaycalc.php">http://www.betcalc.com/backlaycalc.php</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id7" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td><a class="reference external" href="http://www.oddschecker.com/betting-tools/hedging-calculator.htm">http://www.oddschecker.com/betting-tools/hedging-calculator.htm</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id8" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[4]</a></td><td><a class="reference external" href="http://www.wxpython.org/">http://www.wxpython.org/</a></td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">How to Use the Calculator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#navigation">Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#inserting-values">Inserting Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#clearing-the-text-boxes">Clearing the Text boxes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#getting-results">Getting Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#introducing-bias">Introducing Bias</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="theory.html">Introduction to the Betting Exchange</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#betting-exchange">Betting Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#decimal-odds-and-probabilities">Decimal Odds and Probabilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#betting-terminology">Betting Terminology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#the-back-lay-pair">The Back-Lay Pair</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="theory.html#hedging">Hedging</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#references">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#appendix-a-expected-value-and-variance">Appendix A &#8211; Expected Value and Variance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="theory.html#back">Back</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory.html#lay">Lay</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="theory.html#appendix-b-back-lay-commission-simplification">Appendix B &#8211; Back-Lay Commission Simplification</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="development">
+<h2>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h2>
+<p>Suggestions, comments or reviews are welcome! You can send them to <a class="reference external" href="mailto:filipe&#46;funenga&#37;&#52;&#48;ist&#46;utl&#46;pt">filipe<span>&#46;</span>funenga<span>&#64;</span>ist<span>&#46;</span>utl<span>&#46;</span>pt</a>. Also, if you find bugs please create an issue at github <a class="footnote-reference" href="#id10" id="id9">[5]</a> or send me an email.</p>
+<p>The development of this application started in 23/Dec/2012 and has been made in Ubuntu 12.04 with Virtualbox running Windows 7.</p>
+<p>In its current state, a macintosh build is not yet available since I have not immediate access to a macintosh machine. But do not worry, deployment to that framework will be done in the near future.</p>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id9">[5]</a></td><td><a class="reference external" href="https://github.com/ffunenga/traderCalculator/issues">https://github.com/ffunenga/traderCalculator/issues</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="tutorial.html" title="How to Use the Calculator"
+             >next</a></li>
+        <li><a href="#">Trader Calculator</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Filipe Funenga.
+    </div>
+  </body>
+</html>
