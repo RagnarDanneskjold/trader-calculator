@@ -6,6 +6,6 @@ GenericName=Trader Calculator
 Comment=A simple tool for users of betting exchanges
 Exec=/usr/share/trader-calculator/trader-calculator
 Terminal=false
-Icon=trader-calculator.svg
+Icon=/usr/share/pixmaps/trader-calculator.svg
 Type=Application
 Categories=Utility;Application;Calculator;
