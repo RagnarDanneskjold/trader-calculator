@@ -7,8 +7,8 @@ The source code was developed with:
 * wxPython 2.8.12
 
 Links:
-* webpage: ``http://ffunenga.github.com/trader-calculator``.
-* distros: ``https://box.com/trader-calculator``.
+* webpage: [http://ffunenga.github.com/trader-calculator/](http://ffunenga.github.com/trader-calculator/)
+* distros: [https://box.com/trader-calculator/](https://box.com/trader-calculator/)
 
 ### Operating instructions
 To execute, run the script "main.py".
