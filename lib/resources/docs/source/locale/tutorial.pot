@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Trader Calculator 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-15 13:53\n"
+"POT-Creation-Date: 2013-01-15 14:32\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,132 +17,132 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../source/tutorial.rst:2
-# 1ea953b4363940279c1a424b5f67eeb6
+# d5de385a7e34407ebf8b3f29e06be945
 msgid "How to Use the Calculator"
 msgstr ""
 
 #: ../../source/tutorial.rst:3
-# 1f0aaeba21d94c2ea4698725e86d62d4
+# d234e1143ba84cac9db36df4ed225be7
 msgid "The calculator has a total of six editable text boxes, where four can be used to input values (odds and stakes) and the other two to insert parameters (commission and bias)."
 msgstr ""
 
 #: ../../source/tutorial.rst:7
-# b27306d1a2194e1a97b549b46f6c851e
+# 3c9ef78cc61f46db98623bb421f03cb6
 msgid "The keyboard configuration implemented (see :ref:`navigation` and :ref:`clearing`), allows the user to efficiently insert values with a *desktop keyboard* by placing his two hands in the following way: the left hand can be placed on the left side with the index finger on the *TAB* key and the thumb alternating between the *SPACE* and *SHIFT* keys; the right hand can be used to press the numeric pad and arrows."
 msgstr ""
 
 #: ../../source/tutorial.rst:22
-# 25f705d364e347b593809e05d00914d3
+# 9d5487d26059445283ee792ffd97c2cc
 msgid "Navigation"
 msgstr ""
 
 #: ../../source/tutorial.rst:23
-# be1c20aedeff4497a348b048411d5217
+# 17bd07063706449f8eccd9fc3a6d78f1
 msgid "Navigation between text boxes is made with the *TAB* and *ENTER* keys. *SHIFT* reverses the orientation."
 msgstr ""
 
 #: ../../source/tutorial.rst:26
-# 11a11aa110aa4d5c9a6afdb14ebb00f2
+# 8d5f6cae3a3a4f6ca8a6ba448f85c8ba
 msgid "The order of the text boxes was defined based on the following assumption: when a trader is observing a market, he is first focused on the odds, and posteriorly on the stakes."
 msgstr ""
 
 #: ../../source/tutorial.rst:33
-# 87215d92575549769e1e7d1e38d3f4f5
+# dca135221b0c41b28846c09e98dfa59d
 msgid "In order to navigate in the opposite direction, just hold the *SHIFT* key while pressing *TAB* or *ENTER*."
 msgstr ""
 
 #: ../../source/tutorial.rst:37
-# ad6d7e32f9484e9e9f93522b9982baff
+# 3f2f962030be4e20a14e2a2b0ece62ee
 msgid "Inserting Values"
 msgstr ""
 
 #: ../../source/tutorial.rst:38
-# dbf090a248eb4e23a72e09f0397cf776
+# 3200f139edba4b64b20737a9901e610c
 msgid "Values can be inserted like a Python [1]_ float represented in a string that will be parsed by the built-in function float [2]_:"
 msgstr ""
 
 #: ../../source/tutorial.rst:41
-# 0a50abec660f4386874652ac176c40a5
+# b6e89955d9f84668b4b2ef560470c40b
 msgid "\".03\""
 msgstr ""
 
 #: ../../source/tutorial.rst:42
-# a86013dccedf4c9bb2387ee823438e54
+# 5e4c009854d84c53ac408e3c8ae89908
 msgid "\"2.4\""
 msgstr ""
 
 #: ../../source/tutorial.rst:43
-# 5a070bfe810b4ebbaad140f713979752
+# a6bfefdb40cf41c1b96e8a805cd0f66f
 msgid "\"-2\""
 msgstr ""
 
 #: ../../source/tutorial.rst:45
-# 1ef2f259bc524f7e955771e33edf9e00
+# 099bfa80903b4332bfd1039a49cc7d5e
 msgid "If there is any error with the input, the calculator is robust enough and will change the background colour to red and cancel the output of results."
 msgstr ""
 
 #: ../../source/tutorial.rst:52
-# c513539b8adb4437af9860f52cad715e
+# 97f36c32e72548f2b2affff40e49791d
 msgid "The insertion of values can be further improved by using the arrow keys *UP* and *DOWN* to add/subtract 0.01 to the current value."
 msgstr ""
 
 #: ../../source/tutorial.rst:55
-# 910f7dfb04714a0aa7b6d73434bb8f70
+# 2c61f13258f748be89fad4eec388e290
 msgid "http://python.org"
 msgstr ""
 
 #: ../../source/tutorial.rst:56
-# 9afc25c4a5f047ff932264b625c4efca
+# e0a359eb1960420d9e5673606bbe3444
 msgid "http://docs.python.org/2/library/functions.html#float"
 msgstr ""
 
 #: ../../source/tutorial.rst:61
-# ad2ece45eda649e7bf2ff35a7314ee29
+# 939c4eb350ef46d39c5bdf5c126f2c6c
 msgid "Clearing the Text boxes"
 msgstr ""
 
 #: ../../source/tutorial.rst:62
-# e1c7a1f181db40f09b14ccfb887aafbf
+# d2c124f73de541a2aa84c02a2caf7bb8
 msgid "In case of mistake, or any other reason, the value in the text box can be corrected by either using the *BACKSPACE* key with the arrows *LEFT* and *RIGHT* or by erasing the entire value with the *SPACE* key."
 msgstr ""
 
 #: ../../source/tutorial.rst:67
-# 819e0123d303472386b8460809139ae9
+# c6fe95046ede4fe3b00a80ae351d1c78
 msgid "In most cases, the last approach is preferred since the user will be using two hands: the left hand to press *SPACE* and the right hand in the numeric pad to introduce the new value."
 msgstr ""
 
 #: ../../source/tutorial.rst:71
-# 1ac4ca4084da4e3fbff30aac412d0f34
+# 392e70de3b2c48e8b0590a75e5db987a
 msgid "In case of apocalypse, or just because the context has changed, the user can always rely on *CTRL+K* to return to the beginning by cleaning all the text boxes."
 msgstr ""
 
 #: ../../source/tutorial.rst:76
-# d998885b220540e49c2a333dfbfd9f89
+# e8f22bb28a5f4c238455a165bcfdbece
 msgid "Getting Results"
 msgstr ""
 
 #: ../../source/tutorial.rst:77
-# 567ef8d2bf964f5996b31ea9e74fc039
+# b8abdab50e524d91962a80242bd3b183
 msgid "The application tries to automatically calculate the needed results every time a new character is introduced in any of the editable text boxes."
 msgstr ""
 
 #: ../../source/tutorial.rst:84
-# e983a076133244e082954d3af6a13f12
+# 36bcce8829d644b9b20e3352bb3b100d
 msgid "Its important to notice that once the user fills three text boxes, he is implicitly indicating that he wants to find value of the fourth text box. This means that the last box is the *unknown* variable and that it is no longer editable."
 msgstr ""
 
 #: ../../source/tutorial.rst:89
-# 419d1008b79c4061a9c55bdef4c12db9
+# 409f5360d302418c9bccbf65c938ffde
 msgid "In order to change the *unknown* variable the *CTRL+U* keys can be pressed when the wanted variable is focused. Another way to change the *unknown* variable is by *resetting* the calculator (see :ref:`clearing`)."
 msgstr ""
 
 #: ../../source/tutorial.rst:98
-# e29da56884a74daaa8e1ae1f00f9b565
+# ab022b474bb145d2941b13fd70c3fee7
 msgid "Introducing Bias"
 msgstr ""
 
 #: ../../source/tutorial.rst:99
-# 96cac61f39af47ceb2c3f9f56ae3b48a
+# ad9f331f0b7b46708df4df659a31601b
 msgid "Bias between the profits can be setted in the interval [-1, 1]."
 msgstr ""
 

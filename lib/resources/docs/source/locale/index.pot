@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Trader Calculator 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-15 13:53\n"
+"POT-Creation-Date: 2013-01-15 14:32\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,87 +17,92 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../source/index.rst:2
-# f011c58927a34ec7a59ac9fe12a0020b
+# 617789939a6144e6b00ccfe4978c5e21
 msgid "Trader Calculator"
 msgstr ""
 
 #: ../../source/index.rst:3
-# 9aa996cd1bb2482f8356bbe31aa47f21
+# 14869a3520f9408eb9f981f0d7065e75
 msgid "*Documentation also available in:* `Português <../pt/index.html>`_ |portugal|"
 msgstr ""
 
 #: ../../source/index.rst:5
-# 9db4a5ebc9a84cd1a5f15bc9be522e7a
+# f2a629f83c3548669391f44c7ce4557c
 msgid "*Download the latest version for your platform at* `https://box.com/trader-calculator/ <https://box.com/trader-calculator/>`_"
 msgstr ""
 
-#: ../../source/index.rst:12
-# 65a4e88b6a134b3e8bfec4a3b739ec91
+#: ../../source/index.rst:7
+# b3cf022279894750b658f1e618995593
+msgid "*Source-code at* `https://github.com/ffunenga/trader-calculator/ <https://github.com/ffunenga/trader-calculator/>`_"
+msgstr ""
+
+#: ../../source/index.rst:14
+# e353c080c34840999d2e7f62ddc3e7fc
 msgid "Introduction"
 msgstr ""
 
-#: ../../source/index.rst:13
-# f9c6de31405243efbd42817302cdf4c7
+#: ../../source/index.rst:15
+# e447fb0037364bbfa88ecfb0f299ac64
 msgid "This application is a simple tool for users of betting exchanges and it is meant to solve the well-known problem of *Bet-Hedging*: configure the profit/losses of two bets - a back and a lay bet - for all outcomes."
 msgstr ""
 
-#: ../../source/index.rst:21
-# 3630d771624f4ceca2c18c43896fa62f
+#: ../../source/index.rst:23
+# 654b99918bab4ef8a6404dcb87e55a48
 msgid "The main objective in its development was to guarantee the possibility of using solely the keyboard fast and efficiently. Obviously, their exists other solutions of the same kind [1]_ [2]_ [3]_ but all have problems: they depend on the web-browser, none allows keyboard devotion, amongst others."
 msgstr ""
 
-#: ../../source/index.rst:27
-# fe9962d397a9403ca4d537ff92479000
+#: ../../source/index.rst:29
+# 648c3330b120451fb78f1a5539ea5a7b
 msgid "This calculator is an open-source project (GPLv2) and cross-platform. It is implemented as free software aiming to be executed in all platforms supported by wxPython [4]_."
 msgstr ""
 
-#: ../../source/index.rst:31
-# ac11425c87a445359ab6141c8be53e86
+#: ../../source/index.rst:33
+# 7f321072d28143c8ac227f3c9a37576d
 msgid "http://www.arbcruncher.com/"
 msgstr ""
 
-#: ../../source/index.rst:32
-# 145b2fc082734c17ac2e4d499b1f3cfd
+#: ../../source/index.rst:34
+# 85c9b858cd7b4937a1ca346ec08ed65e
 msgid "http://www.betcalc.com/backlaycalc.php"
 msgstr ""
 
-#: ../../source/index.rst:33
-# 504af5e714c9466fa5c9ec83576291d0
+#: ../../source/index.rst:35
+# 5ee3b2f4995a4ccfaa5a779e23a4646d
 msgid "http://www.oddschecker.com/betting-tools/hedging-calculator.htm"
 msgstr ""
 
-#: ../../source/index.rst:34
-# fa8e69b0b4c7408f8453f62ac279693c
+#: ../../source/index.rst:36
+# cdcc8a2a66264c578af05423b6333abb
 msgid "http://www.wxpython.org/"
 msgstr ""
 
-#: ../../source/index.rst:37
-# 52d24d3d786a4d5492db68be8b1e5805
+#: ../../source/index.rst:39
+# 688aa5176d8c455caf3d84b5d0cca6f2
 msgid "Documentation"
 msgstr ""
 
-#: ../../source/index.rst:45
-# 06a086f649fe476e9a16d5d775c7fb5b
+#: ../../source/index.rst:47
+# 98ca5c7bff30420087de2b55ef2e251c
 msgid "Development"
 msgstr ""
 
-#: ../../source/index.rst:46
-# fb4dddf9ebbf4aa4acf84ce18b33ff01
+#: ../../source/index.rst:48
+# bcd1ec21e86141f29fe7b2912088c61e
 msgid "Suggestions, comments or reviews are welcome! You can send them to filipe.funenga@ist.utl.pt. Also, if you find bugs please create an issue at github [5]_ or send me an email."
 msgstr ""
 
-#: ../../source/index.rst:48
-# ebd6e62fd39d4820ad1228afffb2c12b
+#: ../../source/index.rst:50
+# 711286f5b9fe41f992e722f68808ed38
 msgid "The development of this application started in 23/Dec/2012 and has been made in Ubuntu 12.04 with Virtualbox running Windows 7."
 msgstr ""
 
-#: ../../source/index.rst:50
-# 3d7e98ed773640ef9076cc2f48e71d16
+#: ../../source/index.rst:52
+# 9a4e132c417f40778e0e7fba71ffc866
 msgid "In its current state, a macintosh build is not yet available since I have not immediate access to a macintosh machine. But do not worry, deployment to that framework will be done in the near future."
 msgstr ""
 
-#: ../../source/index.rst:52
-# 941cc6f657584f98afd501e2eb0549ff
+#: ../../source/index.rst:54
+# 9300d574f40f408f9413e5a8aa04491a
 msgid "https://github.com/ffunenga/traderCalculator/issues"
 msgstr ""
 

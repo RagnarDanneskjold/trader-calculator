@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Trader Calculator 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-15 13:53\n"
-"PO-Revision-Date: 2013-01-15 13:54+0100\n"
+"POT-Creation-Date: 2013-01-15 14:29\n"
+"PO-Revision-Date: 2013-01-15 14:30+0100\n"
 "Last-Translator: Filipe Funenga <filipe.funenga@ist.utl.pt>\n"
 "Language-Team: MaingTeam <filipe.funenga@ist.utl.pt>\n"
 "Language: pt_BR\n"
@@ -27,59 +27,63 @@ msgstr "*Documentação também disponível em:* `English <../en/index.html>`_ |
 msgid "*Download the latest version for your platform at* `https://box.com/trader-calculator/ <https://box.com/trader-calculator/>`_"
 msgstr "*Faça download da última versão para a sua plataforma em* `https://box.com/trader-calculator/ <https://box.com/trader-calculator/>`_."
 
-#: ../../source/index.rst:12
+#: ../../source/index.rst:7
+msgid "*Source-code at* `https://github.com/ffunenga/trader-calculator/ <https://github.com/ffunenga/trader-calculator/>`_"
+msgstr "*Código-fonte em* `https://github.com/ffunenga/trader-calculator/ <https://github.com/ffunenga/trader-calculator/>`_"
+
+#: ../../source/index.rst:14
 msgid "Introduction"
 msgstr "Introdução"
 
-#: ../../source/index.rst:13
+#: ../../source/index.rst:15
 msgid "This application is a simple tool for users of betting exchanges and it is meant to solve the well-known problem of *Bet-Hedging*: configure the profit/losses of two bets - a back and a lay bet - for all outcomes."
 msgstr "Esta aplicação é uma ferramenta simples para os utilizadores das bolsas de apostas e propõem-se a resolver o problema bastante conhecido de *Bet-Hedging*: equilibrar os lucros de duas apostas – uma a favor e outra contra – no mesmo acontecimento, ao serem realizadas em momentos diferentes."
 
-#: ../../source/index.rst:21
+#: ../../source/index.rst:23
 msgid "The main objective in its development was to guarantee the possibility of using solely the keyboard fast and efficiently. Obviously, their exists other solutions of the same kind [1]_ [2]_ [3]_ but all have problems: they depend on the web-browser, none allows keyboard devotion, amongst others."
 msgstr "O objectivo principal no seu desenvolvimento foi garantir a possibilidade de utilizar somente o teclado de forma rápida e eficiente. Obviamente, existem outras soluções do mesmo género [1]_ [2]_ [3]_ mas todas têm problemas: dependem do web-browser, nenhuma permite a devoção ao teclado, entre outros."
 
-#: ../../source/index.rst:27
+#: ../../source/index.rst:29
 msgid "This calculator is an open-source project (GPLv2) and cross-platform. It is implemented as free software aiming to be executed in all platforms supported by wxPython [4]_."
 msgstr "Esta calculado é um projecto open-source (GPLv2) e multi-plataforma. Foi implementada enquanto software livre com o objectivo de ser executada em todas as plataformas abrangidas pela biblioteca wxPython [4]_."
 
-#: ../../source/index.rst:31
+#: ../../source/index.rst:33
 msgid "http://www.arbcruncher.com/"
 msgstr "http://www.arbcruncher.com/"
 
-#: ../../source/index.rst:32
+#: ../../source/index.rst:34
 msgid "http://www.betcalc.com/backlaycalc.php"
 msgstr "http://www.betcalc.com/backlaycalc.php"
 
-#: ../../source/index.rst:33
+#: ../../source/index.rst:35
 msgid "http://www.oddschecker.com/betting-tools/hedging-calculator.htm"
 msgstr "http://www.oddschecker.com/betting-tools/hedging-calculator.htm"
 
-#: ../../source/index.rst:34
+#: ../../source/index.rst:36
 msgid "http://www.wxpython.org/"
 msgstr "http://www.wxpython.org/"
 
-#: ../../source/index.rst:37
+#: ../../source/index.rst:39
 msgid "Documentation"
 msgstr "Documentação"
 
-#: ../../source/index.rst:45
+#: ../../source/index.rst:47
 msgid "Development"
 msgstr "Desenvolvimento"
 
-#: ../../source/index.rst:46
+#: ../../source/index.rst:48
 msgid "Suggestions, comments or reviews are welcome! You can send them to filipe.funenga@ist.utl.pt. Also, if you find bugs please create an issue at github [5]_ or send me an email."
 msgstr "Sugestões, comentários ou reviews são bem-vindas! Podem enviar-me os mesmos/as para filipe.funenga@ist.utl.pt. Caso encontrem algum problema, podem criar um *issue* no github [5]_ ou enviar-me um email."
 
-#: ../../source/index.rst:48
+#: ../../source/index.rst:50
 msgid "The development of this application started in 23/Dec/2012 and has been made in Ubuntu 12.04 with Virtualbox running Windows 7."
 msgstr "O desenvolvimento desta aplicação foi iniciado em 23/Dez/2012 e tem sido realizado no Ubuntu 12.04 com a Virtualbox a correr o Windows 7."
 
-#: ../../source/index.rst:50
+#: ../../source/index.rst:52
 msgid "In its current state, a macintosh build is not yet available since I have not immediate access to a macintosh machine. But do not worry, deployment to that framework will be done in the near future."
 msgstr "No seu estado actual, a calculadora não possui uma distribuição para macintosh devido à falta de acesso a uma máquina com essa plataforma. Esta limitação será corrigida num futuro próximo!"
 
-#: ../../source/index.rst:52
+#: ../../source/index.rst:54
 msgid "https://github.com/ffunenga/traderCalculator/issues"
 msgstr "https://github.com/ffunenga/traderCalculator/issues"
 

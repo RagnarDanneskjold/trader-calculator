@@ -9,6 +9,7 @@ The source code was developed with:
 Links:
 * webpage: [http://ffunenga.github.com/trader-calculator/](http://ffunenga.github.com/trader-calculator/)
 * distros: [https://box.com/trader-calculator/](https://box.com/trader-calculator/)
+* source: [https://github.com/ffunenga/trader-calculator/](https://github.com/ffunenga/trader-calculator/)
 
 ### Operating instructions
 To execute, run the script "main.py".
