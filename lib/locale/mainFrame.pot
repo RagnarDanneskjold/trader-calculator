@@ -53,6 +53,9 @@ msgstr ""
 msgid "Documentation\tF1"
 msgstr ""
 
+msgid "Check for Updates"
+msgstr ""
+
 msgid "About"
 msgstr ""
 
@@ -108,6 +111,9 @@ msgid "Set textbox as unknown"
 msgstr ""
 
 msgid "Shows the documentation"
+msgstr ""
+
+msgid "Checks for updates online"
 msgstr ""
 
 msgid "Shows credits and license"

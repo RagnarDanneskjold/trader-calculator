@@ -40,6 +40,10 @@
 					<label>Documentation\tF1</label>
 					<help>Shows the documentation</help>
 				</object>
+				<object class="wxMenuItem" name="menuCheckUpdate">
+					<label>Check for Updates</label>
+					<help>Checks for updates online</help>
+				</object>
 				<object class="separator" />
 				<object class="wxMenuItem" name="menuAbout">
 					<label>About</label>

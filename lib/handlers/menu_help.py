@@ -95,13 +95,21 @@ def OnMenuDocumentation(self, evt):
         frame.SetStatusText("Can't open the documentation: " + str(e))
 
 
+def OnMenuUpdates(self, evt):
+    wx.MessageBox("Not implemented yet!",
+                  style=wx.OK|wx.ICON_EXCLAMATION)
+
+
 def init(ctrlr):
     frame = ctrlr.view["mainFrame"]
     
     ctrlr.OnMenuAbout = MethodType(OnMenuAbout, ctrlr)
     ctrlr.OnMenuDocumentation = MethodType(OnMenuDocumentation, ctrlr)
+    ctrlr.OnMenuUpdates = MethodType(OnMenuUpdates, ctrlr)
     
     frame.Bind(wx.EVT_MENU, ctrlr.OnMenuAbout,
                id=xrc.XRCID("menuAbout"))
     frame.Bind(wx.EVT_MENU, ctrlr.OnMenuDocumentation,
                id=xrc.XRCID("menuDocumentation"))
+    frame.Bind(wx.EVT_MENU, ctrlr.OnMenuUpdates,
+               id=xrc.XRCID("menuCheckUpdate"))
