@@ -1,13 +1,13 @@
-![icon image](https://github.com/ffunenga/traderCalculator/blob/master/lib/resources/icon/trader-calculator_128x128x32.png?raw=true "Image")
+![Trader Calculator Icon](https://github.com/ffunenga/trader-calculator/blob/master/lib/resources/icon/trader-calculator_128x128x32.png?raw=true "Trader Calculator Icon")
 
 ## Trader Calculator
 The source code was developed with:
 
 * Python 2.7.3
-* wxPython 2.8.12.1
+* wxPython 2.8.12
 
 Links:
-* webpage: ``http://ffunenga.github.com/traderCalculator``.
+* webpage: ``http://ffunenga.github.com/trader-calculator``.
 * distros: ``https://box.com/trader-calculator``.
 
 ### Operating instructions
