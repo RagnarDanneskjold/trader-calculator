@@ -39,7 +39,7 @@ def ValidateTB(key, parser, view):
     __t = view[key]
     try:
         parser(__t.GetValue())
-        __t.SetBackgroundColour(wx.NullColor)
+        __t.SetBackgroundColour(wx.NullColour)
     except:
         __t.SetBackgroundColour("#EC9797")
     __t.Refresh()
@@ -63,7 +63,7 @@ def OnGuessUnknown(self, new):
     tb = self.view[new]
     tb.ChangeValue("")
     tb.SetForegroundColour("#0000FF")
-    tb.SetBackgroundColour(wx.NullColor)
+    tb.SetBackgroundColour(wx.NullColour)
     tb.Refresh()
     
     titles = {"bo":_("Back Odd"), "bs":_("Back Stake"),

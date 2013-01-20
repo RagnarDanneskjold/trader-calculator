@@ -71,11 +71,17 @@ msgstr "Limpar Todos os Valores\tCtrl+K"
 msgid "Set as Unknown\tCtrl+U"
 msgstr "Definir como Variável\tCtrl+U"
 
+msgid "Show Plot\tCtrl+P"
+msgstr "Mostrar Gráfico\tCtrl+P"
+
 msgid "Help"
 msgstr "Ajuda"
 
 msgid "Documentation\tF1"
 msgstr "Documentação\tF1"
+
+msgid "Check for Updates"
+msgstr "Verificar Actualização"
 
 msgid "About"
 msgstr "Sobre"
@@ -131,8 +137,14 @@ msgstr "Limpar odds e quantias"
 msgid "Set textbox as unknown"
 msgstr "Definir caixa de texto como variável"
 
+msgid "Shows bias variation in a plot"
+msgstr "Apresenta variação do desequilíbrio num gráfico"
+
 msgid "Shows the documentation"
 msgstr "Apresenta a documentação de apoio"
+
+msgid "Checks for updates online"
+msgstr "Verificar a existência de Actualizações"
 
 msgid "Shows credits and license"
 msgstr "Mostrar créditos e licença"

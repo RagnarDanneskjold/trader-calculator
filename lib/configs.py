@@ -28,6 +28,7 @@ from pprint import pformat
 from lib.cli import parseCLI
 
 
+UPDATES_LINK = "http://ffunenga.github.com/trader-calculator/updates"
 if getattr(sys, 'frozen', None): #compatible with pyinstaller
     BASEPATH = sys._MEIPASS
     DOCS_PATH = BASEPATH
@@ -40,6 +41,7 @@ CONFIGFILE_PATH = os.path.join(BASEPATH, "configuration.json")
 DEFAULT_CONFIG = {
     "basedir": BASEPATH,
     "docsdir": DOCS_PATH,
+    "updates": UPDATES_LINK,
     "settings": {
         "size": (285,195),
         "verbose": 0,
@@ -57,7 +59,8 @@ DEFAULT_CONFIG = {
 # application utilizations.
 class Configuration(dict):
     
-    def __init__(self):
+    def __init__(self, version):
+        self["version"] = version
         args = parseCLI()
         self.update(DEFAULT_CONFIG)
         try:

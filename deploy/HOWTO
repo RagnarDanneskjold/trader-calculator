@@ -1,0 +1,20 @@
+This folder aims to simplify deployment by saving configurations files and other required files.
+
+WARNING:
+    Do NOT include distributions on git history. That sort of files 
+    should be uploaded to hosting service (something like dropbox or 
+    box will is ok).
+
+--- DEPLOYMENT ---
+- update translations:
+    - run lib.resources.view.xrc2pot
+    - open .po files inside lib.locale.<language>.LC_MESSAGES
+    - "update catalog from .pot file": choose the correspondent 
+      file from lib.locale
+    - check translations are OK in the application
+- update lib.resources.docs:
+    - update lib.resources.docs.sources and build
+    - copy result to docs/
+    - check if links are working
+- update main.VERSION
+- export with pyinstaller

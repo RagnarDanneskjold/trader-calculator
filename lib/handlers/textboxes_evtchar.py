@@ -43,9 +43,10 @@ def __GetTextboxesValues(keysANDparsers, view, model=None):
             param = __t.GetValue()
             if model: model.set("parameters", key, param)
             values[key] = parser(param)
-            __t.SetBackgroundColour(wx.NullColor)
+            __t.SetBackgroundColour(wx.NullColour)
         except:
             __t.SetBackgroundColour("#EC9797")
+        __t.Update()
         __t.Refresh()
     return values
 
@@ -79,6 +80,7 @@ def OnText(self, evt):
         for key in ["bp", "lp"] + unklst:
             self.view[key].ChangeValue("")
             self.view[key].Refresh()
+        self.view["plot"].Clear()
 
 
 def init(ctrlr):

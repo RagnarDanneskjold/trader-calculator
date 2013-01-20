@@ -33,10 +33,10 @@ from lib.publisher import Publisher
 
 class Model(Publisher):
     
-    def __init__(self):
+    def __init__(self, version):
         Publisher.__init__(self)
         
-        self.conf = Configuration()
+        self.conf = Configuration(version)
         self.lastfocus = None
         self.unknown = None
         self.nav = {"bo":"bs", "bs":"lo", "lo":"ls", "ls":"bo"}
@@ -63,7 +63,7 @@ class Model(Publisher):
         flags = (vals.get("bo",-1)>0,vals.get("bs",-1)>0,
                  vals.get("lo",-1)>0,vals.get("ls",-1)>0)
         self.unknown = self.index3[flags]
-        self.publish( "guess unknown", self.unknown[0])
+        self.publish("guess unknown", self.unknown[0])
         log.debug("unknown was guessed to '%s'", self.unknown[0])
     
     def calculate(self, tbFrom, params, vals):
@@ -75,25 +75,25 @@ class Model(Publisher):
     def __calcLS(self, vals, beta):
         ob,sb,ol = vals["bo"],vals["bs"],vals["lo"]
         sl = sb*(ob+beta-1)/(ol+beta-1)
-        self.publish( "ls", sl)
+        self.publish("ls", sl)
         return sl
     
     def __calcLO(self, vals, beta):
         ob,sb,sl = vals["bo"],vals["bs"],vals["ls"]
         ol = ((sb/sl)*(ob+beta-1))-(beta-1) if sl!=0.0 else "inf"
-        self.publish( "lo", ol)
+        self.publish("lo", ol)
         return ol
     
     def __calcBS(self, vals, beta):
         ob,sl,ol = vals["bo"],vals["ls"],vals["lo"]
         sb = sl*(ol+beta-1)/(ob+beta-1)
-        self.publish( "bs", sb)
+        self.publish("bs", sb)
         return sb
     
     def __calcBO(self, vals, beta):
         sb,ol,sl = vals["bs"],vals["lo"],vals["ls"]
         ob = ((sl/sb)*(ol+beta-1))-(beta-1) if sb!=0.0 else "inf"
-        self.publish( "bo", ob)
+        self.publish("bo", ob)
         return ob
     
     def setUnknown(self, new):

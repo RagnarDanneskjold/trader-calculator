@@ -18,6 +18,8 @@
 #  MA 02110-1301, USA.
 
 
+import wxversion
+wxversion.ensureMinimal('2.8')
 import wx
 import logging as log
 
@@ -31,9 +33,9 @@ from lib.model import Model
 
 class Controller(wx.App):
     
-    def __init__(self):
+    def __init__(self, version):
         self.view = {}
-        self.model = Model()
+        self.model = Model(version)
         wx.App.__init__(self, False)
     
     def OnInit(self):
@@ -48,11 +50,10 @@ class Controller(wx.App):
         # subscribers is made separetly inside the module 'lib.events'.
         #
         # Each script in the module is imported from here and the 
-        # appropriate methods are attached to this instance of the class
-        # Controller in the following way:
+        # appropriate methods are can be attached to this instance of 
+        # the class Controller in the following way:
         #     from types import MethodType
         #     self.handlerX = types.MethodType(handlerX, self)
-        
         
         log.debug("setting i18n")
         self.i18n = SetI18N(self.model.conf["settings"]["language"],
@@ -74,8 +75,16 @@ class Controller(wx.App):
         from lib.handlers.menu_edit import init
         init(self)
         
+        log.debug("setting up 'lib.handlers.menu_plot'")
+        from lib.handlers.menu_plot import init
+        init(self)
+        
         log.debug("setting up 'lib.handlers.menu_help'")
         from lib.handlers.menu_help import init
+        init(self)
+        
+        log.debug("setting up 'lib.handlers.menu_updates'")
+        from lib.handlers.menu_updates import init
         init(self)
         
         log.debug("setting up 'lib.handlers.textboxes_profits'")
@@ -106,6 +115,10 @@ class Controller(wx.App):
         
         log.debug("setting up 'lib.subscribers.unknown'")
         from lib.subscribers.unknown import init
+        init(self)
+        
+        log.debug("setting up 'lib.subscribers.plot'")
+        from lib.subscribers.plot import init
         init(self)
         
         return True

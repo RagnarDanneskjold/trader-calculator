@@ -27,7 +27,8 @@ from lib.langs import GetLanguages
 
 
 def OnMenuPreferences(self, evt):
-    dialog = self.view["xrc"].LoadDialog(None, "preferencesDialog")
+    dialog = self.view["xrc"].LoadDialog(self.view["mainFrame"], 
+                                         "preferencesDialog")
     if dialog is None:
         __msg = "unable to open preferences dialog"
         log.critical(__msg)

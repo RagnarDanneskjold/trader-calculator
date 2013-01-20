@@ -22,9 +22,13 @@ import lib.ansiterm
 from lib.controller import Controller
 
 
+VERSION = ('0.2', 'linux', 'x64')
+#VERSION = ('0.2', 'win7', 'x86')
+
+
 if __name__ == "__main__":
     while True:
-        controller = Controller()
+        controller = Controller(VERSION)
         controller.MainLoop()
         if not hasattr(controller, "isRebooting"):
             break

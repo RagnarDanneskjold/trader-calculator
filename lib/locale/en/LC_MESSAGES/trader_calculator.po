@@ -70,11 +70,17 @@ msgstr "Clear All Values\tCtrl+K"
 msgid "Set as Unknown\tCtrl+U"
 msgstr "Set as Unknown\tCtrl+U"
 
+msgid "Show Plot\tCtrl+P"
+msgstr "Show Plot\tCtrl+P"
+
 msgid "Help"
 msgstr "Help"
 
 msgid "Documentation\tF1"
 msgstr "Documentation\tF1"
+
+msgid "Check for Updates"
+msgstr "Check for Updates"
 
 msgid "About"
 msgstr "About"
@@ -130,8 +136,14 @@ msgstr "Clears odds and stakes"
 msgid "Set textbox as unknown"
 msgstr "Set textbox as unknown"
 
+msgid "Shows bias variation in a plot"
+msgstr "Shows bias variation in a plot"
+
 msgid "Shows the documentation"
 msgstr "Shows the documentation"
+
+msgid "Checks for updates online"
+msgstr "Checks for updates online"
 
 msgid "Shows credits and license"
 msgstr "Shows credits and license"

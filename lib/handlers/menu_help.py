@@ -95,6 +95,11 @@ def OnMenuDocumentation(self, evt):
         frame.SetStatusText("Can't open the documentation: " + str(e))
 
 
+# TODO: as distribuições têm que ser publicadas com o tuplo 
+#       (versão, os, arch) embutido no código.
+
+#{('0.1', 'win7', 'x86'): 'https://www.box.com/s/3fakm7x292dpmdv4q200',
+# ('0.1', 'linux', 'x64'): 'https://www.box.com/s/qc0qqh6nymvkfvmv8cg5'}
 def OnMenuUpdates(self, evt):
     wx.MessageBox("Not implemented yet!",
                   style=wx.OK|wx.ICON_EXCLAMATION)

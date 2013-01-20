@@ -33,6 +33,11 @@
 					<label>Set as Unknown\tCtrl+U</label>
 					<help>Set textbox as unknown</help>
 				</object>
+				<object class="wxMenuItem" name="menuShowPlot">
+					<label>Show Plot\tCtrl+P</label>
+					<help>Shows bias variation in a plot</help>
+					<checkable>1</checkable>
+				</object>
 			</object>
 			<object class="wxMenu" name="menuHelp">
 				<label>Help</label>
@@ -374,6 +379,111 @@
 								<object class="wxButton" name="ok">
 									<style>wxTAB_TRAVERSAL</style>
 									<label>Ok</label>
+									<default>0</default>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="spacer">
+				<option>1</option>
+				<flag>wxALIGN_CENTER_HORIZONTAL</flag>
+				<border>5</border>
+				<size>0,0</size>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="updateDialog">
+		<style>wxDEFAULT_DIALOG_STYLE</style>
+		<size>307,176</size>
+		<title>Check for Updates</title>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="spacer">
+				<option>1</option>
+				<flag>wxALIGN_CENTER_HORIZONTAL</flag>
+				<border>5</border>
+				<size>0,0</size>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALIGN_CENTER_HORIZONTAL|wxRIGHT|wxLEFT|wxEXPAND</flag>
+				<border>20</border>
+				<object class="wxBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxHORIZONTAL</orient>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="labelURL">
+									<label>Manifest URL:</label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="url">
+									<value>http://(...)/updates</value>
+									<maxlength>0</maxlength>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxTOP|wxBOTTOM|wxEXPAND</flag>
+						<border>10</border>
+						<object class="wxGauge" name="gauge">
+							<style>wxGA_HORIZONTAL</style>
+							<range>100</range>
+							<value>0</value>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxBOTTOM</flag>
+						<border>10</border>
+						<object class="wxStaticText" name="status">
+							<fg>#929292</fg>
+							<font>
+								<family>default</family>
+								<style>italic</style>
+								<weight>normal</weight>
+								<underlined>0</underlined>
+							</font>
+							<label>(click &quot;Check Now&quot;)</label>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER_HORIZONTAL</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxHORIZONTAL</orient>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+								<border>5</border>
+								<object class="wxButton" name="check">
+									<label>Check Now</label>
+									<default>0</default>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER_VERTICAL|wxLEFT</flag>
+								<border>5</border>
+								<object class="wxButton" name="download">
+									<enabled>0</enabled>
+									<label>Download Update</label>
 									<default>0</default>
 								</object>
 							</object>

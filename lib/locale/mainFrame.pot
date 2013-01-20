@@ -47,6 +47,9 @@ msgstr ""
 msgid "Set as Unknown\tCtrl+U"
 msgstr ""
 
+msgid "Show Plot\tCtrl+P"
+msgstr ""
+
 msgid "Help"
 msgstr ""
 
@@ -108,6 +111,9 @@ msgid "Clears odds and stakes"
 msgstr ""
 
 msgid "Set textbox as unknown"
+msgstr ""
+
+msgid "Shows bias variation in a plot"
 msgstr ""
 
 msgid "Shows the documentation"
