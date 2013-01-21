@@ -346,6 +346,33 @@
 									</content>
 								</object>
 							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="plotDelayLabel">
+									<style>wxALIGN_RIGHT</style>
+									<label>Plot Delay</label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL|wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxChoice" name="plotdelay">
+									<style>wxTAB_TRAVERSAL</style>
+									<selection>2</selection>
+									<content>
+										<item>0.1</item>
+										<item>0.2</item>
+										<item>0.5</item>
+										<item>0.7</item>
+										<item>1.0</item>
+										<item>1.5</item>
+										<item>2.0</item>
+									</content>
+								</object>
+							</object>
 						</object>
 					</object>
 					<object class="sizeritem">

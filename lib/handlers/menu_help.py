@@ -58,7 +58,7 @@ MA 02110-1301, USA."""
                               "icon", "trader-calculator.ico"])
     info.SetIcon(wx.Icon(iconpath, wx.BITMAP_TYPE_ICO))
     info.SetName(_("Trader Calculator"))
-    info.SetVersion("0.1")
+    info.SetVersion("0.2")
     info.SetDescription(description)
     info.SetCopyright("(C) 2012 Filipe Funenga")
     info.SetWebSite("http://ffunenga.github.com/traderCalculator")

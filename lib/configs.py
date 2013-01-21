@@ -45,7 +45,8 @@ DEFAULT_CONFIG = {
     "settings": {
         "size": (285,195),
         "verbose": 0,
-        "language": "en"
+        "language": "en",
+        "plotdelay": 0.5
     },
     "parameters": {
         "bias": 0.00,
@@ -93,6 +94,9 @@ class Configuration(dict):
                 assert val in [0,1,2]
             elif label == "language":
                 assert type(val) is str and val in ["en", "pt"]
+            elif label == "plotdelay":
+                val = float(val)
+                assert val > 0.0
             else:
                 log.warning("'%s.%s' not parsed", section, label)
         elif section == "parameters":

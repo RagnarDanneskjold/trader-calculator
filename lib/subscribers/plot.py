@@ -21,6 +21,32 @@
 from types import MethodType
 import wx
 import numpy as np
+from threading import Timer, Lock
+
+
+class TaskBuffer:
+    def __init__(self, delay):
+        self.delay = delay
+        self.timer = None
+        self.lock = Lock()
+        self.task = None
+    
+    def Post(self, func, *args, **kargs):
+        try:
+            self.timer.cancel()
+            del self.timer
+        except: pass
+        with self.lock:
+            self.task = (func, args, kargs)
+            self.timer = Timer(float(self.delay["plotdelay"]),
+                               self.Dispatch)
+            self.timer.start()
+    
+    def Dispatch(self):
+        with self.lock:
+            func, args, kargs = self.task
+            self.timer = self.task = None
+            wx.CallAfter(func, *args, **kargs)
 
 
 BIAS = np.arange(-.99, .99, 0.01)
@@ -41,11 +67,11 @@ def UpdatePlot(self,bias,am,sb,ob,sl,ol,key):
     lw = {"__WXGTK__":2, "__WXMSW__":10, "__WXMAC__":2}[wx.Platform]
     
     self.view["plot"].Plot(BIAS, {"sb":sb,"ob":ob,"sl":sl,"ol":ol}[key],
-                           "b", linewidth=lw, ls="-", label="amount")
-    self.view["plot"].Plot(BIAS, ptrue,
-                           "r", linewidth=lw, ls="-", label="ptrue")
-    self.view["plot"].Plot(BIAS, pfalse,
-                           "g", linewidth=lw, ls="-", label="pfalse")
+                           "g", linewidth=lw, ls="-", label="Amount")
+    self.view["plot"].Plot(BIAS, ptrue, "b", linewidth=lw, ls="-",
+                           label="BackProfits")
+    self.view["plot"].Plot(BIAS, pfalse, "r", linewidth=lw, ls="-",
+                           label="LayProfits")
     self.view["plot"].Mark(bias, am)
     self.view["plot"].Autoscale()
 
@@ -57,7 +83,8 @@ def OnLS(self, v):
     bias = self.model.conf["parameters"]["bias"]
     beta = (1.+bias)/(1.-bias)
     am = sb*(ob+beta-1)/(ol+beta-1)
-    self.UpdatePlot(bias,am,sb,ob,sl,ol,"sl")
+    self.view["plot"].taskdelayer.Post(self.UpdatePlot, bias, am,
+                                       sb, ob, sl, ol, "sl")
 
 
 def OnLO(self, v):
@@ -67,7 +94,8 @@ def OnLO(self, v):
     bias = self.model.conf["parameters"]["bias"]
     beta = (1.+bias)/(1.-bias)
     am = beta*((sb/sl)-1.) + ((sb/sl)*(ob-1.)+1.)
-    self.UpdatePlot(bias,am,sb,ob,sl,ol,"ol")
+    self.view["plot"].taskdelayer.Post(self.UpdatePlot, bias, am,
+                                       sb, ob, sl, ol, "ol")
 
 
 def OnBS(self, v):
@@ -77,7 +105,8 @@ def OnBS(self, v):
     bias = self.model.conf["parameters"]["bias"]
     beta = (1.+bias)/(1.-bias)
     am = sl*(ol+beta-1)/(ob+beta-1)
-    self.UpdatePlot(bias,am,sb,ob,sl,ol,"sb")
+    self.view["plot"].taskdelayer.Post(self.UpdatePlot, bias, am,
+                                       sb, ob, sl, ol, "sb")
 
 
 def OnBO(self, v):
@@ -87,7 +116,8 @@ def OnBO(self, v):
     bias = self.model.conf["parameters"]["bias"]
     beta = (1.+bias)/(1.-bias)
     am = beta*((sl/sb)-1.) + ((sl/sb)*(ol-1.)+1.)
-    self.UpdatePlot(bias,am,sb,ob,sl,ol,"ob")
+    self.view["plot"].taskdelayer.Post(self.UpdatePlot, bias, am,
+                                       sb, ob, sl, ol, "ob")
 
 
 def OnSU(self, old, new):
@@ -104,3 +134,6 @@ def init(ctrlr):
         ctrlr.model.subscribe(getattr(ctrlr,lbl), sig)
     
     ctrlr.UpdatePlot = MethodType(UpdatePlot, ctrlr)
+    
+    ctrlr.view["plot"].taskdelayer = TaskBuffer(
+            ctrlr.model.conf["settings"])

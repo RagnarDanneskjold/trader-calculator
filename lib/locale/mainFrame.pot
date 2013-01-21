@@ -1,3 +1,21 @@
+msgid "Trader Calculator - Back-Lay Proportion Rule"
+msgstr ""
+
+msgid "Bias"
+msgstr ""
+
+msgid "Amount"
+msgstr ""
+
+msgid "(Manifest not found!)"
+msgstr ""
+
+msgid "(Update available!)"
+msgstr ""
+
+msgid "(At the lastest version. Nice!)"
+msgstr ""
+
 msgid ""
 "Trader Calculator is an eficient tool for the \n"
 "betting exchange users. \n"
@@ -80,13 +98,13 @@ msgstr ""
 msgid "Commission"
 msgstr ""
 
-msgid "Bias"
-msgstr ""
-
 msgid "Language"
 msgstr ""
 
 msgid "Verbosisty Level"
+msgstr ""
+
+msgid "Plot Delay"
 msgstr ""
 
 msgid "Cancel"
@@ -95,7 +113,22 @@ msgstr ""
 msgid "Ok"
 msgstr ""
 
+msgid "Manifest URL:"
+msgstr ""
+
+msgid "(click "Check Now")"
+msgstr ""
+
+msgid "Check Now"
+msgstr ""
+
+msgid "Download Update"
+msgstr ""
+
 msgid "Preferences"
+msgstr ""
+
+msgid "Check for Updates"
 msgstr ""
 
 msgid "Configure the application preferences"

@@ -20,18 +20,23 @@
 
 import matplotlib as mpl
 mpl.use('WX')
+mpl.rcParams['legend.fancybox'] = True
+mpl.rcParams['font.size'] = 10
+
 from matplotlib.backends.backend_wx import FigureCanvasWx as FigCanvas
 from matplotlib.backends.backend_wx import NavigationToolbar2Wx
+import matplotlib.font_manager as fm
 import wx
 from wx import xrc
 from types import MethodType
+import os
 
 
 class CanvasFrame(wx.Frame):
     
     def __init__(self, parent):
-        wx.Frame.__init__(self, parent, wx.ID_ANY,_("Trader Calculator"
-                          " - Back-Lay Proportion Rule"))
+        wx.Frame.__init__(self, parent, wx.ID_ANY,
+                      _("Trader Calculator - Back-Lay Proportion Rule"))
         
         __f = mpl.figure.Figure(figsize=(1,1),facecolor="white")
         __a = __f.add_subplot(111)
@@ -46,15 +51,15 @@ class CanvasFrame(wx.Frame):
         __a.annotate(_("Bias"), xy=(1,0), xycoords="figure fraction",
                      xytext=(.93,.1), textcoords="figure fraction",
                      horizontalalignment="center",
-                     verticalalignment="center")
+                     verticalalignment="center", fontsize="medium")
         __a.annotate(_("Bias"), xy=(1,0), xycoords="figure fraction",
                      xytext=(.07,.1), textcoords="figure fraction",
                      horizontalalignment="center",
-                     verticalalignment="center")
+                     verticalalignment="center", fontsize="medium")
         __a.annotate(_("Amount"), xy=(1,0), xycoords="figure fraction",
                      xytext=(.5,.93), textcoords="figure fraction",
                      horizontalalignment="center",
-                     verticalalignment="center")
+                     verticalalignment="center", fontsize="medium")
         __a.set_xlim((-1.1,1.1))
         __a.set_ylim((-1.,10.))
         __a.grid(True)
@@ -89,8 +94,10 @@ class CanvasFrame(wx.Frame):
     def Mark(self, bias, amount):
         ax = self.canvas.figure.axes[0]
         if len(ax.texts)>3: del(ax.texts[-1])
-        ax.annotate("", xy=(bias,amount), xycoords='data',
+        ax.annotate("%.02f"%amount, xy=(bias,amount), xycoords='data',
                     xytext=(6,24), textcoords='offset points',
+                    weight="bold", fontsize="large",
+                    bbox=dict(boxstyle="round", fc="1.0"),
                     arrowprops=dict(arrowstyle="->", lw=2, 
                                     connectionstyle="arc3"))
     
@@ -101,6 +108,8 @@ class CanvasFrame(wx.Frame):
         ymax = max([line.get_data()[1].max() for line in ax.lines])
         ymax = (1.1 if ymin>0.0 else .9)*ymax
         ax.set_ylim((ymin,ymax))
+        ax.legend(bbox_to_anchor=(0, 0, 1, 1),
+                  bbox_transform=self.canvas.figure.transFigure)
         self.canvas.draw()
         self.Refresh()
     
@@ -119,7 +128,10 @@ def OnShowPlot(self, evt):
 
 def init(ctrlr):
     frame = ctrlr.view["mainFrame"]
+    iconpath = os.path.join(*[ctrlr.model.conf["basedir"], "resources",
+                              "icon", "trader-calculator.ico"])
     ctrlr.view["plot"] = CanvasFrame(frame)
+    ctrlr.view["plot"].SetIcon(wx.Icon(iconpath, wx.BITMAP_TYPE_ICO))
     ctrlr.view["plot"].Hide()
     
     ctrlr.OnShowPlot = MethodType(OnShowPlot, ctrlr)

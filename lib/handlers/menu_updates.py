@@ -79,7 +79,8 @@ class DownloadLinks:
             CallAfter(self.dia.Refresh)
         except:
             if self.stop: return
-            CallAfter(self.EnableSomeElements, "(Manifest not found!)")
+            CallAfter(self.EnableSomeElements,
+                      _("(Manifest not found!)"))
             CallAfter(self.dia.Layout)
             return
         
@@ -90,13 +91,13 @@ class DownloadLinks:
                     if self.stop: return
                     CallAfter(self.ins.Enable, True)
                     CallAfter(self.EnableSomeElements,
-                              "(Update available!)")
+                              _("(Update available!)"))
                     CallAfter(self.dia.Layout)
                     return
         
         if self.stop: return
         CallAfter(self.EnableSomeElements,
-                  "(At the lastest version. Nice!)")
+                  _("(At the lastest version. Nice!)"))
         CallAfter(self.dia.Layout)
     
     def OnDownload(self, evt):

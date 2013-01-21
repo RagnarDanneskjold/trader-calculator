@@ -45,6 +45,11 @@ def OnMenuPreferences(self, evt):
     __v = xrc.XRCCTRL(dialog, "verbose")
     __v.SetSelection(self.model.conf["settings"]["verbose"])
     elems["verbose"] = lambda: __v.GetSelection()
+    __p = xrc.XRCCTRL(dialog, "plotdelay")
+    __p.SetSelection([.1,.2,.5,.7,1.,1.5,2.3].index(
+        self.model.conf["settings"]["plotdelay"]))
+    elems["plotdelay"] = lambda: [.1,.2,.5,.7,1.,1.5,2.3][
+            __p.GetSelection()]
     __c = xrc.XRCCTRL(dialog, "cancel")
     __c.SetId(wx.ID_CANCEL)
     __o = xrc.XRCCTRL(dialog, "ok")
@@ -59,7 +64,7 @@ def OnMenuPreferences(self, evt):
     dialog.Destroy()
     if ans == wx.ID_OK:
         requiresReboot = ["language"]
-        for key in ["verbose", "language"]:
+        for key in ["verbose", "language", "plotdelay"]:
             __t = self.model.set("settings", key, elems[key]())
             if __t and key in requiresReboot:
                 wx.CallAfter(self.Reboot)

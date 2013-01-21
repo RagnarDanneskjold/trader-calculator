@@ -1,4 +1,5 @@
-This folder aims to simplify deployment by saving configurations files and other required files.
+This folder aims to simplify deployment by saving configurations 
+files and other required files.
 
 WARNING:
     Do NOT include distributions on git history. That sort of files 
